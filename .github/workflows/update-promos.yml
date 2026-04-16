@@ -18,6 +18,68 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: 📋 Verificar estructura de archivos
+        run: |
+          echo "=========================================="
+          echo "📂 VERIFICANDO ESTRUCTURA DE ARCHIVOS"
+          echo "=========================================="
+          
+          echo "\n📁 Raíz:"
+          ls -la
+          
+          echo "\n📁 scripts/:"
+          ls -la scripts/ 2>/dev/null || echo "❌ FALTA carpeta scripts/"
+          
+          echo "\n📁 scrapers/:"
+          ls -la scrapers/ 2>/dev/null || echo "❌ FALTA carpeta scrapers/"
+          
+          echo "\n📁 config/:"
+          ls -la config/ 2>/dev/null || echo "❌ FALTA carpeta config/"
+          
+          echo "\n=========================================="
+          echo "🔍 VERIFICANDO ARCHIVOS CRÍTICOS"
+          echo "=========================================="
+          
+          FILES_OK=true
+          
+          check_file() {
+            if [ -f "$1" ]; then
+              echo "✅ $1"
+            else
+              echo "❌ FALTA: $1"
+              FILES_OK=false
+            fi
+          }
+          
+          check_file "scripts/main.py"
+          check_file "scripts/utils.py"
+          check_file "scripts/normalizer.py"
+          check_file "scripts/deduplicator.py"
+          check_file "scripts/data_cleaner.py"
+          check_file "scripts/cache_manager.py"
+          check_file "scripts/promo_scorer.py"
+          check_file "scripts/fraud_detector.py"
+          check_file "scripts/change_detector.py"
+          check_file "scrapers/__init__.py"
+          check_file "scrapers/base_scraper.py"
+          check_file "scrapers/carrefour_scraper.py"
+          check_file "scrapers/jumbo_scraper.py"
+          check_file "scrapers/dia_scraper.py"
+          check_file "scrapers/coto_scraper.py"
+          check_file "scrapers/makro_scraper.py"
+          check_file "scrapers/modo_scraper.py"
+          check_file "scrapers/clash_scraper.py"
+          check_file "scrapers/promociones_scraper.py"
+          check_file "config/settings.json"
+          check_file "requirements.txt"
+          
+          echo ""
+          if [ "$FILES_OK" = true ]; then
+            echo "✅ TODOS LOS ARCHIVOS ESTÁN PRESENTES"
+          else
+            echo "❌ FALTAN ARCHIVOS - SUBIR LOS QUE FALTAN"
+          fi
+      
       - name: 📦 Instalar dependencias
         run: |
           python -m pip install --upgrade pip
@@ -39,6 +101,8 @@ jobs:
           fi
       
       - name: 🕷️ Ejecutar Scrapers
+        env:
+          DEBUG_SCRAPERS: "true"
         run: |
           python scripts/main.py || exit 1
       
@@ -46,7 +110,6 @@ jobs:
         run: |
           ls -lah data/
           [ -f data/promos.json ] || exit 1
-          head -n 10 data/promos.json
       
       - name: 🤖 Configurar Git
         run: |
