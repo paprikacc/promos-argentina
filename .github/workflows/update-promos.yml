@@ -2,49 +2,235 @@ name: Actualizar Promociones Diarias
 
 on:
   schedule:
-    # Ejecutar todos los días a las 6:00 AM (Argentina UTC-3 = 9:00 UTC)
+    # Ejecutar todos los días a las 9:00 UTC (6:00 AM Argentina UTC-3)
     - cron: '0 9 * * *'
+  
   workflow_dispatch: # Permite ejecución manual desde GitHub
+    inputs:
+      force_scrape:
+        description: 'Forzar scraping (ignorar cache)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
 
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
+    
+    permissions:
+      contents: write  # Necesario para hacer commit
     
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Historial completo para git
+      
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      
+      - name: 📦 Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: 🎭 Install Playwright
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+      
+      - name: 📁 Create necessary directories
+        run: |
+          mkdir -p data/cache
+          mkdir -p data/history
+          mkdir -p logs
+          mkdir -p config
+      
+      - name: ⚙️ Verify configuration
+        run: |
+          if [ ! -f config/settings.json ]; then
+            echo "⚠️ settings.json no encontrado, creando configuración por defecto..."
+            python -c "from scripts.utils import create_default_config, save_json; save_json(create_default_config(), 'config/settings.json')"
+          fi
+          echo "✅ Configuración verificada"
+      
+      - name: 🕷️ Run scrapers
+        env:
+          HEADLESS: true
+          USE_CACHE: ${{ github.event.inputs.force_scrape != 'true' }}
+        run: |
+          echo "🚀 Iniciando proceso de scraping..."
+          python scripts/main.py
+        continue-on-error: false
+      
+      - name: 📊 Verify generated files
+        run: |
+          echo "📁 Verificando archivos generados..."
+          ls -lh data/
+          
+          if [ -f data/promos.json ]; then
+            echo "✅ promos.json generado correctamente"
+            TOTAL=$(cat data/promos.json | grep -o '"total_promociones":[0-9]*' | grep -o '[0-9]*')
+            echo "📊 Total de promociones: $TOTAL"
+          else
+            echo "❌ ERROR: promos.json no fue generado"
+            exit 1
+          fi
+          
+          if [ -f data/promos_destacadas.json ]; then
+            DESTACADAS=$(cat data/promos_destacadas.json | grep -o '"total_destacadas":[0-9]*' | grep -o '[0-9]*')
+            echo "⭐ Promociones destacadas: $DESTACADAS"
+          fi
+      
+      - name: 🧹 Clean old history files (keep last 30 days)
+        run: |
+          echo "🗑️ Limpiando archivos históricos antiguos..."
+          find data/history -name "*.json" -type f -mtime +30 -delete
+          echo "✅ Limpieza completada"
+      
+      - name: 📝 Generate commit message
+        id: commit_msg
+        run: |
+          FECHA=$(date +'%Y-%m-%d %H:%M')
+          TOTAL=$(cat data/promos.json | grep -o '"total_promociones":[0-9]*' | grep -o '[0-9]*' || echo "0")
+          DESTACADAS=$(cat data/promos_destacadas.json | grep -o '"total_destacadas":[0-9]*' | grep -o '[0-9]*' || echo "0")
+          
+          # Detectar cambios
+          if [ -f data/cambios.json ]; then
+            NUEVAS=$(cat data/cambios.json | grep -o '"total_nuevas":[0-9]*' | grep -o '[0-9]*' || echo "0")
+            ELIMINADAS=$(cat data/cambios.json | grep -o '"total_eliminadas":[0-9]*' | grep -o '[0-9]*' || echo "0")
+            
+            MSG="🔄 Actualización $FECHA
+
+📊 Total: $TOTAL promociones ($DESTACADAS destacadas)
+✨ Nuevas: $NUEVAS
+❌ Eliminadas: $ELIMINADAS
+
+[skip ci]"
+          else
+            MSG="🔄 Actualización $FECHA - $TOTAL promociones ($DESTACADAS destacadas) [skip ci]"
+          fi
+          
+          echo "message<<EOF" >> $GITHUB_OUTPUT
+          echo "$MSG" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: 💾 Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # Agregar solo archivos de data/
+          git add data/*.json
+          git add data/*.csv
+          git add data/history/*.json
+          
+          # Verificar si hay cambios
+          if git diff --staged --quiet; then
+            echo "ℹ️ No hay cambios para commitear"
+          else
+            git commit -m "${{ steps.commit_msg.outputs.message }}"
+            git push
+            echo "✅ Cambios pusheados exitosamente"
+          fi
+      
+      - name: 📈 Upload artifacts (backup)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: promos-data-${{ github.run_number }}
+          path: |
+            data/promos.json
+            data/promos_destacadas.json
+            data/stats.json
+            data/cambios.json
+            data/last-update.json
+            logs/scraping.log
+          retention-days: 7
+      
+      - name: 📊 Summary
+        if: always()
+        run: |
+          echo "## 📊 Resumen de Ejecución" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -f data/last-update.json ]; then
+            echo "### ✅ Ejecución Exitosa" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`json" >> $GITHUB_STEP_SUMMARY
+            cat data/last-update.json >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ❌ Error en la Ejecución" >> $GITHUB_STEP_SUMMARY
+            echo "No se generó el archivo last-update.json" >> $GITHUB_STEP_SUMMARY
+          fi
+          
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "🕐 Ejecución: $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+      
+      - name: 🔔 Notify on failure
+        if: failure()
+        run: |
+          echo "❌ ERROR: El scraping falló"
+          echo "Revisa los logs en la sección de Actions"
+          
+          if [ -f logs/scraping.log ]; then
+            echo "📋 Últimas líneas del log:"
+            tail -n 50 logs/scraping.log
+          fi
+          
+          exit 1
+
+  # Job opcional: Validar JSON
+  validate-json:
+    needs: scrape-and-update
+    runs-on: ubuntu-latest
+    if: always()
     
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
-        cache: 'pip'
-    
-    - name: Install Python dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    
-    - name: Install Playwright browsers
-      run: |
-        playwright install chromium
-        playwright install-deps chromium
-    
-    - name: Create data directory
-      run: mkdir -p data
-    
-    - name: Run scrapers
-      run: python scripts/main.py
-      env:
-        HEADLESS: true
-    
-    - name: Commit and push if changed
-      run: |
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git config --global user.name "github-actions[bot]"
-        git add data/
-        git diff --quiet && git diff --staged --quiet || (
-          git commit -m "🔄 Actualización automática $(date +'%Y-%m-%d %H:%M') - $(cat data/last-update.json | grep -o '"total_promociones":[0-9]*' | grep -o '[0-9]*') promociones" && 
-          git push
-        )
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: 🔍 Validate JSON files
+        run: |
+          echo "🔍 Validando estructura de archivos JSON..."
+          
+          validate_json() {
+            if [ ! -f "$1" ]; then
+              echo "⚠️ Archivo no encontrado: $1"
+              return 1
+            fi
+            
+            if ! python -m json.tool "$1" > /dev/null 2>&1; then
+              echo "❌ JSON inválido: $1"
+              return 1
+            fi
+            
+            echo "✅ JSON válido: $1"
+            return 0
+          }
+          
+          EXIT_CODE=0
+          
+          validate_json "data/promos.json" || EXIT_CODE=1
+          validate_json "data/promos_destacadas.json" || EXIT_CODE=1
+          validate_json "data/stats.json" || EXIT_CODE=1
+          validate_json "data/cambios.json" || EXIT_CODE=1
+          validate_json "data/last-update.json" || EXIT_CODE=1
+          
+          if [ $EXIT_CODE -eq 0 ]; then
+            echo "✅ Todos los archivos JSON son válidos"
+          else
+            echo "❌ Algunos archivos JSON son inválidos"
+          fi
+          
+          exit $EXIT_CODE
