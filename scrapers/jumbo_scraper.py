@@ -9,45 +9,45 @@ class JumboScraper(BaseScraper):
     
     def scrape(self, page):
         try:
-            page.goto(self.url, wait_until="domcontentloaded")
+            page.goto(self.url, wait_until="load", timeout=60000)
+            page.wait_for_timeout(8000)
             
-            # Esperar las promociones
-            page.wait_for_selector('[class*="promo"], [class*="discount"], article', timeout=10000)
+            for _ in range(6):
+                page.evaluate("window.scrollBy(0, 800)")
+                page.wait_for_timeout(1500)
             
-            # Intentar con diferentes selectores
-            promo_cards = page.query_selector_all('article, .promo-card, [data-testid*="promo"]')
+            promo_cards = page.query_selector_all('''
+                article, .card, .promo, [class*="promo"], [class*="discount"],
+                [class*="benefit"], [class*="offer"], .item, .product,
+                [class*="card"], [class*="grid"] > div
+            ''')
+            
+            print(f"   📦 Encontrados {len(promo_cards)} elementos")
             
             for card in promo_cards:
                 try:
-                    text_content = card.inner_text()
+                    text = card.inner_text()
+                    if not text or len(text) < 15:
+                        continue
+                    if not any(k in text.lower() for k in ['%', 'descuento', 'banco', 'visa', 'mastercard']):
+                        continue
                     
-                    # Extraer título
-                    titulo = card.query_selector('h2, h3, h4, [class*="title"]')
-                    titulo_text = titulo.inner_text() if titulo else text_content.split('\n')[0]
+                    descuento = self.extract_percentage(text)
+                    if not descuento:
+                        continue
                     
-                    # Banco
-                    banco = self.extract_banco(text_content)
-                    
-                    # Métodos de pago
-                    metodos = self.extract_metodo_pago(text_content)
-                    
-                    # Beneficio
-                    descuento = self.extract_percentage(text_content)
-                    beneficio = descuento if descuento else titulo_text[:100]
-                    
-                    # Tope
-                    tope = self.extract_tope(text_content)
-                    
-                    # Días
-                    dias = self.normalize_dias(text_content)
+                    banco = self.extract_banco(text)
+                    metodos = self.extract_metodo_pago(text)
+                    tope = self.extract_tope(text)
+                    dias = self.normalize_dias(text)
                     
                     promo = {
-                        'id': self.create_promo_id(self.comercio_name, beneficio, str(metodos)),
+                        'id': self.create_promo_id(self.comercio_name, descuento, str(metodos)),
                         'comercio': self.comercio_name,
                         'banco': banco,
                         'metodo_pago': metodos,
-                        'beneficio': beneficio,
-                        'descripcion': text_content[:200],
+                        'beneficio': descuento,
+                        'descripcion': text[:300],
                         'tope': tope,
                         'dias': dias,
                         'vigencia': 'Ver condiciones',
@@ -55,11 +55,9 @@ class JumboScraper(BaseScraper):
                         'actualizado': datetime.now().isoformat(),
                         'fuente': 'jumbo_oficial'
                     }
-                    
                     self.promos.append(promo)
-                    
-                except Exception as e:
+                except:
                     continue
         
         except Exception as e:
-            print(f"  ❌ Error: {e}")
+            print(f"  ❌ Error: {str(e)[:150]}")
