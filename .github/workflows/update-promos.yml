@@ -1,3 +1,11 @@
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright/python:v1.41.0-jammy
+    
+    steps:
+
 name: Actualizar Promociones Diarias
 
 on:
