@@ -9,69 +9,60 @@ class CarrefourScraper(BaseScraper):
     
     def scrape(self, page):
         try:
-            page.goto(self.url, wait_until="networkidle")
+            page.goto(self.url, wait_until="load", timeout=60000)
+            page.wait_for_timeout(8000)  # Esperar 8 seg para que cargue JS
             
-            # Esperar a que carguen las promociones
-            page.wait_for_selector('.promocion-item, .promo-card, [class*="promo"]', timeout=10000)
+            # Scroll intensivo
+            for _ in range(6):
+                page.evaluate("window.scrollBy(0, 800)")
+                page.wait_for_timeout(1500)
             
-            # Ajustar selectores según la estructura real del sitio
-            promo_cards = page.query_selector_all('.promocion-item, .promo-card, article')
+            page.evaluate("window.scrollTo(0, 0)")
+            page.wait_for_timeout(3000)
+            
+            # Buscar CUALQUIER cosa que parezca una promo
+            promo_cards = page.query_selector_all('''
+                article, .card, .promo, [class*="promo"], [class*="discount"],
+                [class*="benefit"], [class*="offer"], .item, .product,
+                [class*="card"], [class*="grid"] > div, li[class]
+            ''')
+            
+            print(f"   📦 Encontrados {len(promo_cards)} elementos")
             
             for card in promo_cards:
                 try:
-                    # Extraer información de cada tarjeta
-                    titulo = card.query_selector('h3, h4, .titulo')
-                    titulo_text = titulo.inner_text() if titulo else ''
+                    text = card.inner_text()
+                    if not text or len(text) < 15:
+                        continue
+                    if not any(k in text.lower() for k in ['%', 'descuento', 'banco', 'visa', 'mastercard', 'cuota', 'off']):
+                        continue
                     
-                    descripcion = card.query_selector('.descripcion, p, .detalle')
-                    descripcion_text = descripcion.inner_text() if descripcion else ''
+                    descuento = self.extract_percentage(text)
+                    if not descuento:
+                        continue
                     
-                    full_text = f"{titulo_text} {descripcion_text}"
-                    
-                    # Extraer banco
-                    banco_elem = card.query_selector('.banco, .entidad, img[alt*="banco"]')
-                    banco = self.extract_banco(
-                        banco_elem.get_attribute('alt') if banco_elem and banco_elem.tag_name == 'img' 
-                        else banco_elem.inner_text() if banco_elem else full_text
-                    )
-                    
-                    # Extraer métodos de pago
-                    metodos = self.extract_metodo_pago(full_text)
-                    
-                    # Extraer beneficio
-                    descuento = self.extract_percentage(full_text)
-                    beneficio = descuento if descuento else titulo_text[:100]
-                    
-                    # Extraer tope
-                    tope = self.extract_tope(full_text)
-                    
-                    # Extraer días
-                    dias = self.normalize_dias(full_text)
-                    
-                    # Vigencia
-                    vigencia_elem = card.query_selector('.vigencia, .fecha, time')
-                    vigencia = vigencia_elem.inner_text() if vigencia_elem else 'Consultar vigencia'
+                    banco = self.extract_banco(text)
+                    metodos = self.extract_metodo_pago(text)
+                    tope = self.extract_tope(text)
+                    dias = self.normalize_dias(text)
                     
                     promo = {
-                        'id': self.create_promo_id(self.comercio_name, beneficio, str(metodos)),
+                        'id': self.create_promo_id(self.comercio_name, descuento, str(metodos)),
                         'comercio': self.comercio_name,
                         'banco': banco,
                         'metodo_pago': metodos,
-                        'beneficio': beneficio,
-                        'descripcion': descripcion_text[:200],
+                        'beneficio': descuento,
+                        'descripcion': text[:300],
                         'tope': tope,
                         'dias': dias,
-                        'vigencia': vigencia,
+                        'vigencia': 'Ver condiciones',
                         'url': self.url,
                         'actualizado': datetime.now().isoformat(),
                         'fuente': 'carrefour_oficial'
                     }
-                    
                     self.promos.append(promo)
-                    
-                except Exception as e:
-                    print(f"  ⚠️ Error procesando promo individual: {e}")
+                except:
                     continue
         
         except Exception as e:
-            print(f"  ❌ Error en scraping general: {e}")
+            print(f"  ❌ Error: {str(e)[:150]}")
