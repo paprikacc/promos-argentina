@@ -1,0 +1,47 @@
+{
+  "fecha": "2026-04-16T14:58:44.175989",
+  "total_promociones": 1,
+  "estadisticas": {
+    "total": 1,
+    "por_comercio": {
+      "Makro": 1
+    },
+    "por_banco": {
+      "Banco Galicia": 1
+    },
+    "por_metodo_pago": {
+      "Visa": 1,
+      "Mastercard": 1,
+      "American Express": 1,
+      "Cabal": 1,
+      "Naranja": 1,
+      "MODO": 1,
+      "Mercado Pago": 1,
+      "Cuenta DNI": 1,
+      "Débito": 1,
+      "Crédito": 1,
+      "Tarjeta": 1
+    },
+    "por_dia": {
+      "Lunes": 1,
+      "Martes": 1,
+      "Miércoles": 1,
+      "Jueves": 1,
+      "Viernes": 1,
+      "Sábado": 1,
+      "Domingo": 1
+    },
+    "con_tope": 1,
+    "sin_tope": 0
+  },
+  "errores": [],
+  "tiempo_ejecucion": "76.82s",
+  "fuentes": [
+    "Carrefour",
+    "Jumbo",
+    "Día",
+    "Coto",
+    "Makro",
+    "MODO"
+  ]
+}
