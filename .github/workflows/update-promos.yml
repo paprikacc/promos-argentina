@@ -2,66 +2,96 @@ name: Actualizar Promociones Diarias
 
 on:
   schedule:
-    # Ejecutar todos los días a las 9:00 UTC (6:00 AM Argentina)
     - cron: '0 9 * * *'
-  workflow_dispatch: # Permite ejecución manual
+  workflow_dispatch:
 
 jobs:
   scrape-and-update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # ← CAMBIO CRÍTICO: Usar Ubuntu 22.04
     
     steps:
-      - name: 📥 Checkout del repositorio
+      - name: 📥 Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: true
       
-      - name: 🐍 Configuración de Python
+      - name: 🐍 Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       
-      - name: 📦 Instalación de Dependencias
+      - name: 📦 Instalar dependencias Python
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      - name: 🎭 Instalar Playwright Browsers
+      - name: 🎭 Instalar Playwright
         run: |
+          echo "Instalando Playwright..."
           playwright install chromium
           playwright install-deps chromium
       
-      - name: 📁 Crear directorios necesarios
+      - name: 📁 Crear directorios
         run: |
           mkdir -p data/cache
           mkdir -p data/history
           mkdir -p logs
           mkdir -p config
       
-      - name: ⚙️ Verificar configuración
+      - name: ⚙️ Verificar y crear config
         run: |
           if [ ! -f config/settings.json ]; then
-            echo "⚠️ Creando settings.json por defecto..."
-            echo '{"comercios_normalizados": {}, "scraping": {"timeout": 30000, "retry_attempts": 3}}' > config/settings.json
+            echo "Creando config por defecto..."
+            cat > config/settings.json << 'EOF'
+{
+  "comercios_normalizados": {},
+  "bancos_normalizados": {},
+  "metodos_pago_normalizados": {},
+  "palabras_clave_invalidas": [],
+  "scraping": {
+    "timeout": 30000,
+    "retry_attempts": 3,
+    "delay_between_scrapers": 2000
+  },
+  "cache": {
+    "enabled": true,
+    "ttl_hours": 6
+  },
+  "scoring": {
+    "pesos": {
+      "descuento_alto": 40,
+      "sin_tope": 25,
+      "todos_los_dias": 15,
+      "metodos_multiples": 10,
+      "vigencia_larga": 10
+    },
+    "umbral_destacada": 70
+  },
+  "fraud_detection": {
+    "descuento_max_sospechoso": 90,
+    "palabras_sospechosas": []
+  }
+}
+EOF
           fi
-          echo "✅ Configuración verificada"
+          echo "✅ Config verificado"
       
       - name: 🕷️ Ejecutar Scrapers
         env:
-          PYTHONPATH: ${{ github.workspace }}
+          HEADLESS: "true"
+          USE_CACHE: "true"
         run: |
           echo "🚀 Iniciando scraping..."
           python scripts/main.py || {
-            echo "❌ Error en scraping. Mostrando logs..."
+            echo "❌ Error en scraping"
             if [ -f logs/scraping.log ]; then
-              tail -n 50 logs/scraping.log
+              echo "📋 Últimas 100 líneas del log:"
+              tail -n 100 logs/scraping.log
             fi
             exit 1
           }
       
-      - name: 🔍 Validar archivos generados
+      - name: 🔍 Validar archivos
         run: |
-          echo "📁 Contenido de data/:"
+          echo "📊 Verificando archivos generados..."
           ls -lah data/
           
           if [ ! -f data/promos.json ]; then
@@ -69,11 +99,14 @@ jobs:
             exit 1
           fi
           
-          echo "✅ Archivos generados correctamente"
+          echo "✅ Archivos OK"
+          
+          # Mostrar primeras líneas del JSON
+          echo "📄 Contenido de promos.json (primeras 20 líneas):"
+          head -n 20 data/promos.json
       
       - name: 🧹 Limpiar historial antiguo
         run: |
-          echo "🗑️ Limpiando archivos antiguos..."
           find data/history -name "*.json" -type f -mtime +30 -delete 2>/dev/null || true
       
       - name: 🤖 Configurar Git
@@ -88,13 +121,16 @@ jobs:
           if git diff --staged --quiet; then
             echo "ℹ️ No hay cambios para commitear"
           else
-            TOTAL=$(grep -o '"total_promociones":[0-9]*' data/promos.json | grep -o '[0-9]*' || echo "0")
-            git commit -m "🔄 Update $(date +'%Y-%m-%d %H:%M') - $TOTAL promos [skip ci]"
+            TOTAL=$(grep -o '"total_promociones":[0-9]*' data/promos.json 2>/dev/null | grep -o '[0-9]*' || echo "0")
+            FECHA=$(date +'%Y-%m-%d %H:%M')
+            
+            git commit -m "🔄 Actualización $FECHA - $TOTAL promociones [skip ci]"
             git push
-            echo "✅ Cambios pusheados exitosamente"
+            
+            echo "✅ Cambios pusheados: $TOTAL promociones"
           fi
       
-      - name: 📊 Resumen Final
+      - name: 📊 Resumen
         if: always()
         run: |
           if [ -f data/promos.json ]; then
@@ -104,5 +140,14 @@ jobs:
           
           if [ -f data/last-update.json ]; then
             echo "📄 Metadata:"
-            cat data/last-update.json
+            cat data/last-update.json | head -n 20
           fi
+      
+      - name: 📤 Subir logs (si falla)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-error-${{ github.run_number }}
+          path: |
+            logs/
+          retention-days: 7
