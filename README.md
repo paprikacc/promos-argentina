@@ -51,26 +51,26 @@
 
 ### **JSON Principal** (Todas las promociones)
 
-https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.json
+https://raw.githubusercontent.com/paprikacc//promos-argentina/main/data/promos.json
 
 ### **Promociones Destacadas** (Top ofertas - Score ≥70)
 
-https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/last-update.jsondata/promos_destacadas.json
+https://raw.githubusercontent.com/paprikacc/promos-argentina/main/                                     https://raw.githubusercontent.com/paprikacc/promos-argentina/main/data/last-update.jsondata/promos_destacadas.json
 
 
 ### **Versión CSV**
 
-https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.csv
+https://raw.githubusercontent.com/paprikacc/promos-argentina/main/data/promos.csv
 
 
 ### **Estadísticas**
 
-https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/stats.json
+https://raw.githubusercontent.com/paprikacc/promos-argentina/main/data/stats.json
 
 
 ### **Novedades del Día**
 
-https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/cambios.json
+https://raw.githubusercontent.com/paprikacc/promos-argentina/main/data/cambios.json
 
 
 ### **Última Actualización** (Metadata)
@@ -86,7 +86,7 @@ https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/cambios.
 // Obtener todas las promociones
 const fetchPromos = async () => {
   const response = await fetch(
-    'https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.json'
+    'https://raw.githubusercontent.com/paprikacc/promos-argentina/main/data/promos.json'
   );
   const data = await response.json();
   return data.promociones; // Array de promociones
@@ -116,7 +116,7 @@ const getPromosForToday = (promos) => {
 // Obtener solo destacadas
 const getDestacadas = async () => {
   const response = await fetch(
-    'https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos_destacadas.json'
+    'https://raw.githubusercontent.com/paprikacc/promos-argentina/main/data/promos_destacadas.json'
   );
   const data = await response.json();
   return data.promociones;
@@ -167,7 +167,7 @@ class Promo {
 
 Future<List<Promo>> fetchPromos() async {
   final response = await http.get(
-    Uri.parse('https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.json'),
+    Uri.parse('https://raw.githubusercontent.com/paprikacc/promos-argentina/main/data/promos.json'),
   );
 
   if (response.statusCode == 200) {
