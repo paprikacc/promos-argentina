@@ -5,7 +5,7 @@ on:
     # Ejecutar todos los días a las 9:00 UTC (6:00 AM Argentina UTC-3)
     - cron: '0 9 * * *'
   
-  workflow_dispatch: # Permite ejecución manual desde GitHub
+  workflow_dispatch: # Permite ejecución manual  desde GitHub
     inputs:
       force_scrape:
         description: 'Forzar scraping (ignorar cache)'
