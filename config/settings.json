@@ -1,20 +1,26 @@
 {
   "comercios_normalizados": {
     "carrefour": ["Carrefour", "CARREFOUR", "carrefour express", "Carrefour Express"],
-    "jumbo": ["Jumbo", "JUMBO", "jumbo"],
+    "jumbo": ["Jumbo", "JUMBO"],
     "dia": ["Día", "DIA", "Supermercados Día", "dia"],
     "coto": ["Coto", "COTO", "Coto Digital"],
     "makro": ["Makro", "MAKRO", "Vital"],
     "disco": ["Disco", "DISCO"],
     "walmart": ["Walmart", "WALMART"],
-    "carrefour_market": ["Carrefour Market", "carrefour market"]
+    "vea": ["Vea", "VEA"],
+    "carrefour_market": ["Carrefour Market", "carrefour market"],
+    "la_anonima": ["La Anónima", "La Anonima"],
+    "libertad": ["Libertad", "LIBERTAD"],
+    "supermercados": ["Supermercados", "supermercado"]
   },
   "bancos_normalizados": {
     "galicia": "Banco Galicia",
     "santander": "Banco Santander",
+    "santander rio": "Banco Santander",
     "bbva": "BBVA",
     "macro": "Banco Macro",
     "nacion": "Banco Nación",
+    "nación": "Banco Nación",
     "provincia": "Banco Provincia",
     "icbc": "ICBC",
     "hsbc": "HSBC",
@@ -23,13 +29,25 @@
     "patagonia": "Banco Patagonia",
     "comafi": "Banco Comafi",
     "itau": "Banco Itaú",
+    "itaú": "Banco Itaú",
     "credicoop": "Banco Credicoop",
     "frances": "Banco Francés",
-    "industrial": "Banco Industrial"
+    "francés": "Banco Francés",
+    "industrial": "Banco Industrial",
+    "hipotecario": "Banco Hipotecario",
+    "bind": "BIND",
+    "brubank": "Brubank",
+    "ualá": "Ualá",
+    "uala": "Ualá",
+    "naranja": "Naranja",
+    "lemon": "Lemon"
   },
   "metodos_pago_normalizados": {
     "visa": "Visa",
+    "visa debito": "Visa Débito",
+    "visa credito": "Visa Crédito",
     "mastercard": "Mastercard",
+    "master card": "Mastercard",
     "american express": "American Express",
     "amex": "American Express",
     "cabal": "Cabal",
@@ -42,7 +60,11 @@
     "debito": "Débito",
     "débito": "Débito",
     "credito": "Crédito",
-    "crédito": "Crédito"
+    "crédito": "Crédito",
+    "tarjeta": "Tarjeta",
+    "efectivo": "Efectivo",
+    "transferencia": "Transferencia",
+    "qr": "QR"
   },
   "palabras_clave_invalidas": [
     "publicidad",
@@ -50,12 +72,112 @@
     "banner",
     "newsletter",
     "suscribirse",
+    "suscríbete",
     "ver más",
-    "cargar más"
+    "ver mas",
+    "cargar más",
+    "cargar mas",
+    "cookies",
+    "política de privacidad",
+    "terminos y condiciones",
+    "términos y condiciones",
+    "aceptar",
+    "cerrar",
+    "menu",
+    "menú",
+    "navegación",
+    "navegacion",
+    "compartir",
+    "seguinos",
+    "síguenos"
   ],
+  "scoring": {
+    "pesos": {
+      "descuento_alto": 40,
+      "sin_tope": 25,
+      "todos_los_dias": 15,
+      "metodos_multiples": 10,
+      "vigencia_larga": 10
+    },
+    "umbral_destacada": 70,
+    "comentarios": {
+      "descuento_alto": "Mayor peso para descuentos significativos (>20%)",
+      "sin_tope": "Promociones sin tope son más valiosas",
+      "todos_los_dias": "Disponibilidad amplia aumenta el valor",
+      "metodos_multiples": "Más opciones de pago = más accesible",
+      "vigencia_larga": "Promociones con más tiempo son preferibles"
+    }
+  },
+  "fraud_detection": {
+    "descuento_max_sospechoso": 90,
+    "palabras_sospechosas": [
+      "gratis total",
+      "100% descuento",
+      "100% gratis",
+      "ilimitado",
+      "sin condiciones",
+      "sin restricciones",
+      "totalmente gratis",
+      "premio garantizado",
+      "gana seguro"
+    ],
+    "confianza_minima": 50,
+    "comentarios": {
+      "descuento_max_sospechoso": "Descuentos mayores a este % son marcados como sospechosos",
+      "confianza_minima": "Puntaje mínimo de confianza para aceptar una promo"
+    }
+  },
+  "cache": {
+    "enabled": true,
+    "ttl_hours": 6,
+    "max_age_hours": 24,
+    "comentarios": {
+      "enabled": "Habilitar/deshabilitar sistema de cache",
+      "ttl_hours": "Tiempo de vida del cache en horas",
+      "max_age_hours": "Edad máxima antes de forzar actualización"
+    }
+  },
   "scraping": {
     "timeout": 30000,
     "retry_attempts": 3,
-    "delay_between_scrapers": 2000
+    "delay_between_scrapers": 2000,
+    "validate_urls": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "comentarios": {
+      "timeout": "Timeout por página en milisegundos",
+      "retry_attempts": "Número de reintentos en caso de error",
+      "delay_between_scrapers": "Delay entre scrapers en milisegundos",
+      "validate_urls": "Validar que las URLs estén activas"
+    }
+  },
+  "history": {
+    "enabled": true,
+    "retention_days": 30,
+    "max_files": 60,
+    "comentarios": {
+      "enabled": "Guardar histórico de promociones",
+      "retention_days": "Días de retención del histórico",
+      "max_files": "Máximo de archivos históricos a mantener"
+    }
+  },
+  "output": {
+    "generate_csv": true,
+    "generate_stats": true,
+    "generate_changelog": true,
+    "pretty_print": true,
+    "comentarios": {
+      "generate_csv": "Generar versión CSV además de JSON",
+      "generate_stats": "Generar archivo de estadísticas",
+      "generate_changelog": "Generar archivo de cambios",
+      "pretty_print": "Formatear JSON con indentación"
+    }
+  },
+  "notifications": {
+    "enabled": false,
+    "min_new_promos": 5,
+    "comentarios": {
+      "enabled": "Habilitar notificaciones (futuro)",
+      "min_new_promos": "Mínimo de promos nuevas para notificar"
+    }
   }
 }
