@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema automatizado de scraping de promociones bancarias en supermercados de Argentina">
+    <meta name="keywords" content="Argentina, promociones, supermercados, bancos, descuentos, API">
+    <meta name="author" content="Promos Argentina">
+    <title>🛒 Promociones Argentina - API Automática - Documentación Completa</title>
+    
+    <style>
+        /* Reset y base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0366d6;
+            --secondary-color: #28a745;
+            --danger-color: #d73a49;
+            --warning-color: #ffd33d;
+            --bg-color: #ffffff;
+            --text-color: #24292e;
+            --border-color: #e1e4e8;
+            --code-bg: #f6f8fa;
+            --highlight-bg: #fff5b1;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-size: 16px;
+        }
+
+        /* Encabezados */
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 12px;
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 32px;
+        }
+
+        h4 {
+            font-size: 1.25em;
+        }
+
+        /* Enlaces */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Párrafos */
+        p {
+            margin-bottom: 16px;
+        }
+
+        /* Listas */
+        ul, ol {
+            margin-bottom: 16px;
+            padding-left: 2em;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Código */
+        code {
+            background-color: var(--code-bg);
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', monospace;
+            font-size: 0.9em;
+            color: #e83e8c;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            padding: 16px;
+            border-radius: 6px;
+            overflow-x: auto;
+            margin-bottom: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        pre code {
+            background-color: transparent;
+            padding: 0;
+            color: var(--text-color);
+            font-size: 0.85em;
+            line-height: 1.45;
+        }
+
+        /* Tablas */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+            overflow: hidden;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--code-bg);
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        /* Blockquotes */
+        blockquote {
+            border-left: 4px solid var(--warning-color);
+            padding-left: 16px;
+            margin: 16px 0;
+            color: #6a737d;
+            background-color: #fffbdd;
+            padding: 12px 16px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 4px;
+        }
+
+        .badge-success {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .badge-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .badge-warning {
+            background-color: var(--warning-color);
+            color: #24292e;
+        }
+
+        .badge-danger {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        /* Emojis */
+        .emoji {
+            font-size: 1.2em;
+        }
+
+        /* Separadores */
+        hr {
+            border: none;
+            border-top: 2px solid var(--border-color);
+            margin: 32px 0;
+        }
+
+        /* Centrar contenido */
+        .center {
+            text-align: center;
+        }
+
+        /* Caja de alerta */
+        .alert {
+            padding: 16px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            border-left: 4px solid;
+        }
+
+        .alert-info {
+            background-color: #e7f3ff;
+            border-color: var(--primary-color);
+            color: #004085;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            border-color: var(--secondary-color);
+            color: #155724;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            border-color: var(--warning-color);
+            color: #856404;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            border-color: var(--danger-color);
+            color: #721c24;
+        }
+
+        /* Grid de características */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .feature-card {
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #fafbfc;
+        }
+
+        .feature-card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        /* Tabla de contenidos */
+        .toc {
+            background-color: var(--code-bg);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 32px;
+            border: 1px solid var(--border-color);
+        }
+
+        .toc h2 {
+            margin-top: 0;
+            border-bottom: none;
+            font-size: 1.5em;
+        }
+
+        .toc ul {
+            margin-bottom: 0;
+        }
+
+        /* Arquitectura diagram */
+        .architecture {
+            background-color: #f6f8fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border: 1px solid var(--border-color);
+            font-family: monospace;
+            white-space: pre;
+            overflow-x: auto;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+
+        /* Botones */
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 4px;
+        }
+
+        .btn:hover {
+            background-color: #0256c7;
+            text-decoration: none;
+        }
+
+        /* Header superior */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            color: white;
+            border-bottom: none;
+            margin-bottom: 16px;
+            font-size: 3em;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin-bottom: 24px;
+        }
+
+        .badges {
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background-color: #f6f8fa;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .header {
+                background: none;
+                color: var(--text-color);
+            }
+
+            .header h1 {
+                color: var(--text-color);
+            }
+
+            a {
+                color: var(--text-color);
+                text-decoration: underline;
+            }
+
+            pre {
+                page-break-inside: avoid;
+            }
+
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+        }
+
+        /* Código de lenguaje específico */
+        .language-bash { color: #22863a; }
+        .language-javascript { color: #f1e05a; }
+        .language-python { color: #3572A5; }
+        .language-json { color: #e34c26; }
+
+        /* Iconos de check */
+        .check::before {
+            content: "✅ ";
+        }
+
+        .cross::before {
+            content: "❌ ";
+        }
+
+        .warning::before {
+            content: "⚠️ ";
+        }
+
+        .info::before {
+            content: "ℹ️ ";
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>🛒 Promociones Argentina - API Automática</h1>
+        <p>Sistema automatizado de extracción, normalización y publicación de promociones bancarias en supermercados de Argentina</p>
+        
+        <div class="badges">
+            <img src="https://github.com/TU-USUARIO/promos-argentina/actions/workflows/update-promos.yml/badge.svg" alt="Actualización Diaria">
+            <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
+            <img src="https://img.shields.io/badge/python-3.11+-blue.svg" alt="Python">
+            <img src="https://img.shields.io/badge/playwright-1.41.0-green.svg" alt="Playwright">
+        </div>
+    </div>
+
+    <!-- Tabla de contenidos -->
+    <div class="toc">
+        <h2>📑 Tabla de Contenidos</h2>
+        <ul>
+            <li><a href="#caracteristicas">🎯 Características Principales</a></li>
+            <li><a href="#comercios">🏪 Comercios Incluidos</a></li>
+            <li><a href="#metodos-pago">💳 Métodos de Pago</a></li>
+            <li><a href="#urls">🔗 URLs de Acceso Directo</a></li>
+            <li><a href="#ejemplos">📱 Ejemplos de Integración</a></li>
+            <li><a href="#estructura-json">📋 Estructura del JSON</a></li>
+            <li><a href="#arquitectura">🏗️ Arquitectura del Sistema</a></li>
+            <li><a href="#instalacion">🚀 Instalación Local</a></li>
+            <li><a href="#github-actions">⚙️ GitHub Actions</a></li>
+            <li><a href="#estadisticas">📊 Estadísticas</a></li>
+            <li><a href="#contribuir">🤝 Contribuir</a></li>
+            <li><a href="#disclaimer">⚠️ Disclaimer</a></li>
+            <li><a href="#licencia">📄 Licencia</a></li>
+            <li><a href="#contacto">📞 Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    
+    <h2 id="caracteristicas">🎯 Características Principales</h2>
+    
+    <div class="features-grid">
+        <div class="feature-card">
+            <h4>🕷️ 8 Fuentes de Datos</h4>
+            <p>Carrefour, Jumbo, Día, Coto, Makro, MODO, Clash, Promociones.com.ar</p>
+        </div>
+        <div class="feature-card">
+            <h4>⏰ Actualización Automática</h4>
+            <p>Scraping diario a las 6:00 AM (hora Argentina)</p>
+        </div>
+        <div class="feature-card">
+            <h4>🔄 Deduplicación Inteligente</h4>
+            <p>Elimina promociones duplicadas con algoritmos avanzados</p>
+        </div>
+        <div class="feature-card">
+            <h4>⭐ Sistema de Scoring</h4>
+            <p>Identifica las mejores ofertas (puntuación 0-100)</p>
+        </div>
+        <div class="feature-card">
+            <h4>🛡️ Detección de Fraude</h4>
+            <p>Filtra promociones sospechosas automáticamente</p>
+        </div>
+        <div class="feature-card">
+            <h4>🔔 Detector de Cambios</h4>
+            <p>Identifica nuevas promos, modificaciones y eliminaciones</p>
+        </div>
+        <div class="feature-card">
+            <h4>📦 Múltiples Formatos</h4>
+            <p>JSON, CSV, con estadísticas detalladas</p>
+        </div>
+        <div class="feature-card">
+            <h4>💾 Cache Inteligente</h4>
+            <p>Evita scraping innecesario (TTL: 6 horas)</p>
+        </div>
+        <div class="feature-card">
+            <h4>📜 Histórico Completo</h4>
+            <p>Snapshots diarios con retención de 30 días</p>
+        </div>
+        <div class="feature-card">
+            <h4>🌐 API REST-Like</h4>
+            <p>Acceso directo mediante URLs públicas</p>
+        </div>
+    </div>
+
+    <h2 id="comercios">🏪 Comercios Incluidos</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Comercio</th>
+                <th>Tipo</th>
+                <th>Estado</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🛒 <strong>Carrefour</strong></td>
+                <td>Oficial</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://www.carrefour.com.ar/descuentos-bancarios" target="_blank">Ver sitio</a></td>
+            </tr>
+            <tr>
+                <td>🛒 <strong>Jumbo</strong></td>
+                <td>Oficial</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://www.jumbo.com.ar/descuentos-del-dia" target="_blank">Ver sitio</a></td>
+            </tr>
+            <tr>
+                <td>🛒 <strong>Día</strong></td>
+                <td>Oficial</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://diaonline.supermercadosdia.com.ar/medios-de-pago-y-promociones" target="_blank">Ver sitio</a></td>
+            </tr>
+            <tr>
+                <td>🛒 <strong>Coto</strong></td>
+                <td>Oficial</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://www.cotodigital.com.ar" target="_blank">Ver sitio</a></td>
+            </tr>
+            <tr>
+                <td>🛒 <strong>Makro</strong></td>
+                <td>Oficial</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://makro.com.ar/beneficios-bancarios/" target="_blank">Ver sitio</a></td>
+            </tr>
+            <tr>
+                <td>💳 <strong>MODO</strong></td>
+                <td>Multi-comercio</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://www.modo.com.ar/promos" target="_blank">Ver sitio</a></td>
+            </tr>
+            <tr>
+                <td>🌐 <strong>Clash Promos</strong></td>
+                <td>Agregador</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://promos.clash.com.ar/supermercados/" target="_blank">Ver sitio</a></td>
+            </tr>
+            <tr>
+                <td>🌐 <strong>Promociones.com.ar</strong></td>
+                <td>Agregador</td>
+                <td><span class="badge badge-success">✅ Activo</span></td>
+                <td><a href="https://www.promociones.com.ar/category/supermercados/" target="_blank">Ver sitio</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="metodos-pago">💳 Métodos de Pago Soportados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Categoría</th>
+                <th>Métodos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Tarjetas de Crédito</strong></td>
+                <td>Visa, Mastercard, American Express, Cabal, Naranja</td>
+            </tr>
+            <tr>
+                <td><strong>Tarjetas de Débito</strong></td>
+                <td>Visa Débito, Mastercard Débito</td>
+            </tr>
+            <tr>
+                <td><strong>Billeteras Digitales</strong></td>
+                <td>MODO, Mercado Pago, Cuenta DNI</td>
+            </tr>
+            <tr>
+                <td><strong>Bancos</strong></td>
+                <td>Galicia, Santander, BBVA, Macro, Nación, Provincia, ICBC, HSBC, Ciudad, y más</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="urls">🔗 URLs de Acceso Directo</h2>
+
+    <div class="alert alert-info">
+        <strong>📱 Para Integrar en tu Aplicación</strong><br>
+        Estas URLs proporcionan acceso directo a los datos en formato JSON/CSV
+    </div>
+
+    <h3>JSON Principal (Todas las promociones)</h3>
+    <pre><code>https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.json</code></pre>
+
+    <h3>Promociones Destacadas (Score ≥ 70)</h3>
+    <pre><code>https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos_destacadas.json</code></pre>
+
+    <h3>Versión CSV</h3>
+    <pre><code>https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.csv</code></pre>
+
+    <h3>Estadísticas Detalladas</h3>
+    <pre><code>https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/stats.json</code></pre>
+
+    <h3>Changelog de Cambios Diarios</h3>
+    <pre><code>https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/cambios.json</code></pre>
+
+    <h3>Metadata de Actualización</h3>
+    <pre><code>https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/last-update.json</code></pre>
+
+    <h2 id="ejemplos">📱 Ejemplos de Integración</h2>
+
+    <h3>JavaScript / React Native</h3>
+    <pre><code class="language-javascript">// Hook personalizado para React
+import { useState, useEffect } from 'react';
+
+const PROMOS_URL = 'https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.json';
+
+export function usePromos() {
+  const [promos, setPromos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    fetch(PROMOS_URL)
+      .then(res => res.json())
+      .then(data => {
+        setPromos(data.promociones);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError(err);
+        setLoading(false);
+      });
+  }, []);
+
+  return { promos, loading, error };
+}
+
+// Funciones de filtrado
+export const filtrarPorComercio = (promos, comercio) => {
+  return promos.filter(p => 
+    p.comercio.toLowerCase() === comercio.toLowerCase()
+  );
+};
+
+export const topPromos = (promos, limit = 10) => {
+  return [...promos]
+    .sort((a, b) => (b.score || 0) - (a.score || 0))
+    .slice(0, limit);
+};</code></pre>
+
+    <h3>Python / Django / Flask</h3>
+    <pre><code class="language-python">import requests
+from datetime import datetime
+
+class PromosAPI:
+    BASE_URL = "https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data"
+    
+    @staticmethod
+    def obtener_promos():
+        """Obtiene todas las promociones"""
+        response = requests.get(f"{PromosAPI.BASE_URL}/promos.json")
+        response.raise_for_status()
+        data = response.json()
+        return data['promociones']
+    
+    @staticmethod
+    def top_promos(promos, limit=10):
+        """Obtiene las mejores promociones por score"""
+        sorted_promos = sorted(promos, key=lambda x: x.get('score', 0), reverse=True)
+        return sorted_promos[:limit]
+
+# Uso
+api = PromosAPI()
+promos = api.obtener_promos()
+top_5 = api.top_promos(promos, 5)
+
+for i, promo in enumerate(top_5, 1):
+    print(f"{i}. {promo['comercio']}: {promo['beneficio']} (Score: {promo['score']})")</code></pre>
+
+    <h3>Flutter / Dart</h3>
+    <pre><code class="language-dart">import 'dart:convert';
+import 'package:http/http.dart' as http;
+
+class PromosService {
+  static const String baseUrl = 
+    'https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data';
+
+  Future&lt;List&lt;Promo&gt;&gt; fetchPromos() async {
+    final response = await http.get(Uri.parse('$baseUrl/promos.json'));
+
+    if (response.statusCode == 200) {
+      final data = json.decode(response.body);
+      return (data['promociones'] as List)
+          .map((p) => Promo.fromJson(p))
+          .toList();
+    } else {
+      throw Exception('Error al cargar promociones');
+    }
+  }
+}</code></pre>
+
+    <h2 id="estructura-json">📋 Estructura del JSON</h2>
+
+    <h3>Ejemplo de Promoción</h3>
+    <pre><code class="language-json">{
+  "ultima_actualizacion": "2024-01-15T09:00:00.123456",
+  "total_promociones": 247,
+  "promociones": [
+    {
+      "id": "a3f7b2c91d4e",
+      "comercio": "Carrefour",
+      "banco": "Banco Galicia",
+      "metodo_pago": ["Visa", "Mastercard"],
+      "beneficio": "20%",
+      "descripcion": "20% de descuento en compras superiores a $10.000",
+      "tope": "$5.000",
+      "dias": ["Lunes", "Martes", "Miércoles"],
+      "vigencia": "Hasta 31/01/2024",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2024-01-15T09:00:00",
+      "fuente": "carrefour_oficial",
+      "score": 85,
+      "destacada": true,
+      "confianza": 100,
+      "flags_fraude": []
+    }
+  ]
+}</code></pre>
+
+    <h3>Documentación de Campos</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Tipo</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>id</code></td>
+                <td>string</td>
+                <td>Hash único MD5 (12 chars)</td>
+                <td>"a3f7b2c91d4e"</td>
+            </tr>
+            <tr>
+                <td><code>comercio</code></td>
+                <td>string</td>
+                <td>Nombre normalizado del supermercado</td>
+                <td>"Carrefour"</td>
+            </tr>
+            <tr>
+                <td><code>banco</code></td>
+                <td>string</td>
+                <td>Banco emisor (normalizado)</td>
+                <td>"Banco Galicia"</td>
+            </tr>
+            <tr>
+                <td><code>metodo_pago</code></td>
+                <td>array</td>
+                <td>Métodos de pago aceptados</td>
+                <td>["Visa", "Mastercard"]</td>
+            </tr>
+            <tr>
+                <td><code>beneficio</code></td>
+                <td>string</td>
+                <td>Descuento principal</td>
+                <td>"20%", "3x2"</td>
+            </tr>
+            <tr>
+                <td><code>tope</code></td>
+                <td>string | null</td>
+                <td>Tope de reintegro</td>
+                <td>"$5.000" o null</td>
+            </tr>
+            <tr>
+                <td><code>dias</code></td>
+                <td>array</td>
+                <td>Días válidos ([] = todos)</td>
+                <td>["Lunes", "Martes"]</td>
+            </tr>
+            <tr>
+                <td><code>score</code></td>
+                <td>number</td>
+                <td>Puntuación de calidad (0-100)</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td><code>destacada</code></td>
+                <td>boolean</td>
+                <td>true si score ≥ 70</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td><code>confianza</code></td>
+                <td>number</td>
+                <td>Nivel anti-fraude (0-100)</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="arquitectura">🏗️ Arquitectura del Sistema</h2>
+
+    <div class="architecture">
+┌──────────────────────────────────────────────────────────────┐
+│                       🌐 FUENTES WEB                         │
+│  Carrefour │ Jumbo │ Día │ Coto │ Makro │ MODO │ Clash      │
+└────────────┬─────────────────────────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────────────────────────┐
+│              🕷️ SCRAPERS (Playwright + BS4)                  │
+│  • Navegación automatizada con Chromium headless             │
+│  • Manejo de JavaScript y contenido dinámico                 │
+└────────────┬─────────────────────────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────────────────────────┐
+│                  🧠 CEREBRO PRINCIPAL                        │
+│  FASE 1: 💾 Cache Manager                                   │
+│  FASE 2: 🔧 Normalizer                                      │
+│  FASE 3: 🔄 Deduplicator                                    │
+│  FASE 4: 🧹 Data Cleaner                                    │
+│  FASE 5: 🛡️ Fraud Detector                                  │
+│  FASE 6: ⭐ Promo Scorer                                     │
+│  FASE 7: 🔔 Change Detector                                 │
+│  FASE 8: 💾 Export (JSON, CSV, Stats)                       │
+└────────────┬─────────────────────────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────────────────────────┐
+│              📊 DATA/ (GitHub Repository)                    │
+│  • promos.json (principal)                                   │
+│  • promos_destacadas.json (top ofertas)                      │
+│  • stats.json (estadísticas)                                 │
+│  • cambios.json (changelog)                                  │
+└────────────┬─────────────────────────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────────────────────────┐
+│                   📱 TU APLICACIÓN                           │
+└──────────────────────────────────────────────────────────────┘
+    </div>
+
+    <h2 id="instalacion">🚀 Instalación Local</h2>
+
+    <div class="alert alert-info">
+        <strong>Prerequisitos:</strong> Python 3.11+, pip, Git
+    </div>
+
+    <pre><code class="language-bash"># 1. Clonar el repositorio
+git clone https://github.com/TU-USUARIO/promos-argentina.git
+cd promos-argentina
+
+# 2. Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate   # Windows
+
+# 3. Instalar dependencias
+pip install -r requirements.txt
+
+# 4. Instalar Playwright
+playwright install chromium
+
+# 5. Ejecutar scraping
+python scripts/main.py
+
+# 6. Verificar archivos generados
+ls -lh data/</code></pre>
+
+    <h2 id="github-actions">⚙️ GitHub Actions - Automatización</h2>
+
+    <div class="alert alert-warning">
+        <strong class="warning">Configuración Importante:</strong>
+        <ol>
+            <li>Ve a Settings → Actions → General</li>
+            <li>Selecciona "Read and write permissions"</li>
+            <li>Marca "Allow GitHub Actions to create and approve pull requests"</li>
+            <li>Guarda cambios</li>
+        </ol>
+    </div>
+
+    <p><strong>Ejecución Automática:</strong> Todos los días a las 6:00 AM (hora Argentina)</p>
+
+    <p><strong>Ejecución Manual:</strong></p>
+    <ol>
+        <li>Ve a la pestaña "Actions"</li>
+        <li>Selecciona "Actualizar Promociones Diarias"</li>
+        <li>Click en "Run workflow"</li>
+        <li>Confirma la ejecución</li>
+    </ol>
+
+    <h2 id="estadisticas">📊 Estadísticas y Análisis</h2>
+
+    <p>El archivo <code>stats.json</code> incluye:</p>
+
+    <pre><code class="language-json">{
+  "total": 247,
+  "por_comercio": {
+    "Carrefour": 45,
+    "Jumbo": 38,
+    "Coto": 35
+  },
+  "por_banco": {
+    "Banco Galicia": 67,
+    "Banco Santander": 42
+  },
+  "por_metodo_pago": {
+    "Visa": 156,
+    "Mastercard": 143
+  },
+  "con_tope": 189,
+  "sin_tope": 58
+}</code></pre>
+
+    <h2 id="contribuir">🤝 Contribuir</h2>
+
+    <p class="check">Las contribuciones son bienvenidas</p>
+
+    <h3>Cómo Agregar un Nuevo Comercio</h3>
+    <ol>
+        <li><strong>Fork</strong> el repositorio</li>
+        <li>Crea un nuevo scraper en <code>scrapers/</code></li>
+        <li>Actualiza <code>scrapers/__init__.py</code></li>
+        <li>Actualiza <code>scripts/main.py</code></li>
+        <li>Crea un <strong>Pull Request</strong></li>
+    </ol>
+
+    <h3>Reportar Bugs</h3>
+    <ul>
+        <li>Usa <a href="https://github.com/TU-USUARIO/promos-argentina/issues" target="_blank">GitHub Issues</a></li>
+        <li>Incluye descripción detallada, pasos para reproducir y logs</li>
+    </ul>
+
+    <h2 id="disclaimer">⚠️ Disclaimer Legal</h2>
+
+    <div class="alert alert-warning">
+        <h4>Términos de Uso</h4>
+        <ul>
+            <li class="check">Extrae información <strong>pública</strong> de sitios web</li>
+            <li class="check">Respeta los <code>robots.txt</code> de cada sitio</li>
+            <li class="check">Implementa delays para no saturar servidores</li>
+            <li class="check">Se actualiza máximo 1 vez al día</li>
+        </ul>
+    </div>
+
+    <div class="alert alert-danger">
+        <h4>Responsabilidades</h4>
+        <ul>
+            <li class="cross">No nos hacemos responsables por cambios en las promociones</li>
+            <li class="info">Verifica siempre en el sitio oficial antes de comprar</li>
+            <li class="cross">No garantizamos la exactitud de los datos</li>
+            <li class="info">Uso educativo y de referencia</li>
+        </ul>
+    </div>
+
+    <h2 id="licencia">📄 Licencia</h2>
+
+    <p>Este proyecto está bajo la licencia <strong>MIT</strong>.</p>
+
+    <pre><code>MIT License - Uso libre con atribución
+
+Copyright (c) 2024 Promos Argentina
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...</code></pre>
+
+    <h2 id="contacto">📞 Soporte y Contacto</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Canal</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>🐛 <strong>Reportar Bugs</strong></td>
+                <td><a href="https://github.com/TU-USUARIO/promos-argentina/issues" target="_blank">GitHub Issues</a></td>
+            </tr>
+            <tr>
+                <td>💡 <strong>Sugerencias</strong></td>
+                <td><a href="https://github.com/TU-USUARIO/promos-argentina/discussions" target="_blank">GitHub Discussions</a></td>
+            </tr>
+            <tr>
+                <td>📧 <strong>Email</strong></td>
+                <td>tu-email@ejemplo.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>🌟 Agradecimientos</h2>
+
+    <ul>
+        <li><a href="https://playwright.dev/" target="_blank">Playwright</a> - Automatización de navegadores</li>
+        <li><a href="https://www.crummy.com/software/BeautifulSoup/" target="_blank">BeautifulSoup</a> - Parsing HTML</li>
+        <li><a href="https://www.python.org/" target="_blank">Python</a> - Lenguaje de programación</li>
+        <li><a href="https://github.com/features/actions" target="_blank">GitHub Actions</a> - CI/CD gratuito</li>
+        <li>Todos los comercios que publican sus promociones públicamente</li>
+    </ul>
+
+    <h2>📈 Roadmap</h2>
+
+    <h3>v1.0 (Actual) <span class="badge badge-success">✅ Completado</span></h3>
+    <ul>
+        <li class="check">Scraping de 8 fuentes</li>
+        <li class="check">Sistema de scoring</li>
+        <li class="check">Detección de fraude</li>
+        <li class="check">Deduplicación inteligente</li>
+        <li class="check">GitHub Actions automation</li>
+    </ul>
+
+    <h3>v1.1 (Próximo) <span class="badge badge-warning">🚧 En desarrollo</span></h3>
+    <ul>
+        <li>Sistema de notificaciones (Telegram/Email)</li>
+        <li>Filtro por ubicación geográfica</li>
+        <li>Historial de precios y tendencias</li>
+        <li>API REST con FastAPI</li>
+    </ul>
+
+    <h3>v2.0 (Futuro) <span class="badge badge-primary">🔮 Planificado</span></h3>
+    <ul>
+        <li>Dashboard web interactivo</li>
+        <li>Predicción de mejores días (ML)</li>
+        <li>App móvil nativa (Flutter)</li>
+        <li>Sistema de alertas personalizadas</li>
+    </ul>
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>🚀 ¡Comienza Ahora!</h2>
+        <p>Prueba la API en 1 línea:</p>
+        <pre><code>curl https://raw.githubusercontent.com/TU-USUARIO/promos-argentina/main/data/promos.json</code></pre>
+        
+        <hr style="margin: 40px 0;">
+        
+        <p><strong>Hecho con ❤️ en Argentina 🇦🇷</strong></p>
+        <p>Si este proyecto te ayudó, considera darle una ⭐ en GitHub</p>
+        
+        <div style="margin-top: 20px;">
+            <a href="#" class="btn">⬆ Volver arriba</a>
+            <a href="https://github.com/TU-USUARIO/promos-argentina" class="btn" target="_blank">📂 Ver en GitHub</a>
+        </div>
+        
+        <p style="margin-top: 40px; font-size: 0.9em; color: #6a737d;">
+            Última actualización: <span id="fecha-actualizacion"></span><br>
+            Versión: 1.0.0
+        </p>
+    </div>
+
+    <!-- Script para fecha -->
+    <script>
+        // Mostrar fecha actual
+        document.getElementById('fecha-actualizacion').textContent = 
+            new Date().toLocaleDateString('es-AR', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+
+        // Smooth scroll para enlaces internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Añadir botón "Copiar" a los bloques de código
+        document.querySelectorAll('pre code').forEach((block) => {
+            const button = document.createElement('button');
+            button.textContent = '📋 Copiar';
+            button.style.cssText = 'position: absolute; right: 8px; top: 8px; padding: 4px 8px; background: #0366d6; color: white; border: none; border-radius: 3px; cursor: pointer; font-size: 12px;';
+            
+            const pre = block.parentElement;
+            pre.style.position = 'relative';
+            pre.appendChild(button);
+            
+            button.addEventListener('click', () => {
+                const text = block.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    button.textContent = '✅ Copiado!';
+                    setTimeout(() => {
+                        button.textContent = '📋 Copiar';
+                    }, 2000);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
