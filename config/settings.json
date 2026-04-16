@@ -1,0 +1,61 @@
+{
+  "comercios_normalizados": {
+    "carrefour": ["Carrefour", "CARREFOUR", "carrefour express", "Carrefour Express"],
+    "jumbo": ["Jumbo", "JUMBO", "jumbo"],
+    "dia": ["Día", "DIA", "Supermercados Día", "dia"],
+    "coto": ["Coto", "COTO", "Coto Digital"],
+    "makro": ["Makro", "MAKRO", "Vital"],
+    "disco": ["Disco", "DISCO"],
+    "walmart": ["Walmart", "WALMART"],
+    "carrefour_market": ["Carrefour Market", "carrefour market"]
+  },
+  "bancos_normalizados": {
+    "galicia": "Banco Galicia",
+    "santander": "Banco Santander",
+    "bbva": "BBVA",
+    "macro": "Banco Macro",
+    "nacion": "Banco Nación",
+    "provincia": "Banco Provincia",
+    "icbc": "ICBC",
+    "hsbc": "HSBC",
+    "ciudad": "Banco Ciudad",
+    "supervielle": "Banco Supervielle",
+    "patagonia": "Banco Patagonia",
+    "comafi": "Banco Comafi",
+    "itau": "Banco Itaú",
+    "credicoop": "Banco Credicoop",
+    "frances": "Banco Francés",
+    "industrial": "Banco Industrial"
+  },
+  "metodos_pago_normalizados": {
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "american express": "American Express",
+    "amex": "American Express",
+    "cabal": "Cabal",
+    "naranja": "Naranja",
+    "modo": "MODO",
+    "mercado pago": "Mercado Pago",
+    "mercadopago": "Mercado Pago",
+    "cuenta dni": "Cuenta DNI",
+    "cuentadni": "Cuenta DNI",
+    "debito": "Débito",
+    "débito": "Débito",
+    "credito": "Crédito",
+    "crédito": "Crédito"
+  },
+  "palabras_clave_invalidas": [
+    "publicidad",
+    "anuncio",
+    "banner",
+    "newsletter",
+    "suscribirse",
+    "ver más",
+    "cargar más"
+  ],
+  "scraping": {
+    "timeout": 30000,
+    "retry_attempts": 3,
+    "delay_between_scrapers": 2000
+  }
+}
