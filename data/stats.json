@@ -1,38 +1,39 @@
 {
-  "total": 37,
+  "total": 38,
   "por_comercio": {
     "Carrefour": 30,
-    "Jumbo": 6,
+    "Jumbo": 7,
     "Makro": 1
   },
   "por_banco": {
     "Banco Nación": 5,
     "Todos Los Bancos": 31,
+    "Banco Santander": 1,
     "Banco Galicia": 1
   },
   "por_metodo_pago": {
-    "Visa": 13,
-    "Mastercard": 12,
-    "American Express": 7,
-    "Naranja": 6,
-    "MODO": 6,
-    "Mercado Pago": 10,
+    "Visa": 14,
+    "Mastercard": 13,
+    "American Express": 8,
+    "Naranja": 7,
+    "MODO": 7,
+    "Mercado Pago": 11,
     "Cuenta DNI": 5,
     "Débito": 10,
-    "Crédito": 18,
+    "Crédito": 19,
     "No Especificado": 14,
     "Cabal": 1
   },
   "por_dia": {
-    "Lunes": 8,
-    "Martes": 24,
-    "Miércoles": 18,
-    "Jueves": 6,
-    "Viernes": 5,
-    "Sábado": 6,
-    "Domingo": 21,
+    "Lunes": 9,
+    "Martes": 25,
+    "Miércoles": 19,
+    "Jueves": 7,
+    "Viernes": 6,
+    "Sábado": 7,
+    "Domingo": 22,
     "Todos los días": 11
   },
-  "con_tope": 30,
+  "con_tope": 31,
   "sin_tope": 7
 }
