@@ -93,16 +93,17 @@ class BaseScraper(ABC):
         pass
     
     def _save_debug_screenshot(self, page, reason="unknown"):
-        """Guarda captura de pantalla si algo falla para depurar"""
+        """Guarda captura de pantalla para depurar"""
         try:
-            filename = self.debug_dir / f"{self.comercio_name.lower().replace(' ', '_')}_{reason}.png"
+            self.debug_dir.mkdir(parents=True, exist_ok=True)
+            filename = self.debug_dir / f"{self.comercio_name.lower().replace(' ', '_').replace('(', '').replace(')', '')}_{reason}.png"
             page.screenshot(path=str(filename), full_page=True)
-            print(f"   📸 Debug screenshot guardado: {filename}")
+            print(f"   📸 Screenshot guardado: {filename.name}")
         except Exception as e:
             print(f"   ⚠️ No se pudo guardar screenshot: {e}")
     
     def run(self):
-        """Ejecuta el scraper con Playwright"""
+        """Ejecuta el scraper con Playwright - SIEMPRE toma screenshot"""
         print(f"🔍 Iniciando scraping de {self.comercio_name}...")
         
         try:
@@ -113,21 +114,22 @@ class BaseScraper(ABC):
                     user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
                 )
                 page = context.new_page()
-                page.set_default_timeout(45000)  # 45 segundos
+                page.set_default_timeout(45000)
                 
-                # Ejecutar el scraping específico
-                self.scrape(page)
+                # Ejecutar scraping (capturar errores internos)
+                try:
+                    self.scrape(page)
+                except Exception as e:
+                    print(f"   ⚠️ Error dentro de scrape(): {str(e)[:150]}")
                 
-                # Si no encontró nada, tomar screenshot para debug
-                if not self.promos:
-                    print(f"   ⚠️ No se encontraron promos. Tomando screenshot...")
-                    self._save_debug_screenshot(page, "no_promos_found")
+                # SIEMPRE tomar screenshot, sin importar qué pase
+                self._save_debug_screenshot(page, "resultado_final")
                 
                 browser.close()
             
             print(f"✅ {self.comercio_name}: {len(self.promos)} promociones extraídas")
             
         except Exception as e:
-            print(f"❌ Error en {self.comercio_name}: {str(e)[:200]}")
+            print(f"❌ Error crítico en {self.comercio_name}: {str(e)[:200]}")
         
         return self.promos
