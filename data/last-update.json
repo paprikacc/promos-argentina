@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-04-21T05:31:19.145565",
+  "fecha": "2026-04-21T10:13:20.704216",
   "total_promociones": 60,
   "total_destacadas": 8,
   "estadisticas": {
@@ -45,5 +45,5 @@
     "sin_tope": 16
   },
   "errores": [],
-  "tiempo_ejecucion": "156.01s"
+  "tiempo_ejecucion": "158.93s"
 }

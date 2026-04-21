@@ -1,5 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-21T05:31:19.144344",
+  "ultima_actualizacion": "2026-04-21T10:13:20.702972",
   "total_destacadas": 8,
   "promociones": [
     {
@@ -15,7 +15,7 @@
       "dias": [],
       "vigencia": "Consultar vigencia",
       "url": "https://promos.clash.com.ar/supermercados/",
-      "actualizado": "2026-04-21T05:30:48.080994",
+      "actualizado": "2026-04-21T10:12:48.496211",
       "fuente": "clash",
       "confianza": 100,
       "flags_fraude": [],
@@ -35,7 +35,7 @@
       "dias": [],
       "vigencia": "Ver condiciones",
       "url": "https://www.carrefour.com.ar/descuentos-bancarios",
-      "actualizado": "2026-04-21T05:29:09.153570",
+      "actualizado": "2026-04-21T10:11:08.532210",
       "fuente": "carrefour_oficial",
       "confianza": 100,
       "flags_fraude": [],
@@ -55,7 +55,7 @@
       "dias": [],
       "vigencia": "Consultar vigencia",
       "url": "https://promos.clash.com.ar/supermercados/",
-      "actualizado": "2026-04-21T05:30:48.080688",
+      "actualizado": "2026-04-21T10:12:48.495888",
       "fuente": "clash",
       "confianza": 100,
       "flags_fraude": [],
@@ -75,7 +75,7 @@
       "dias": [],
       "vigencia": "Ver condiciones",
       "url": "https://www.jumbo.com.ar/descuentos-del-dia",
-      "actualizado": "2026-04-21T05:29:34.315007",
+      "actualizado": "2026-04-21T10:11:34.432161",
       "fuente": "jumbo_oficial",
       "confianza": 100,
       "flags_fraude": [],
@@ -95,7 +95,7 @@
       "dias": [],
       "vigencia": "Ver condiciones",
       "url": "https://www.jumbo.com.ar/descuentos-del-dia",
-      "actualizado": "2026-04-21T05:29:34.356321",
+      "actualizado": "2026-04-21T10:11:34.473685",
       "fuente": "jumbo_oficial",
       "confianza": 100,
       "flags_fraude": [],
@@ -115,7 +115,7 @@
       "dias": [],
       "vigencia": "Consultar vigencia",
       "url": "https://www.promociones.com.ar/category/supermercados/",
-      "actualizado": "2026-04-21T05:31:16.419757",
+      "actualizado": "2026-04-21T10:13:17.910835",
       "fuente": "promociones.com.ar",
       "confianza": 75,
       "flags_fraude": [
@@ -139,7 +139,7 @@
       ],
       "vigencia": "Consultar vigencia",
       "url": "https://www.promociones.com.ar/category/supermercados/",
-      "actualizado": "2026-04-21T05:31:16.419464",
+      "actualizado": "2026-04-21T10:13:17.910508",
       "fuente": "promociones.com.ar",
       "confianza": 75,
       "flags_fraude": [
@@ -163,7 +163,7 @@
       ],
       "vigencia": "Consultar vigencia",
       "url": "https://www.promociones.com.ar/category/supermercados/",
-      "actualizado": "2026-04-21T05:31:16.419571",
+      "actualizado": "2026-04-21T10:13:17.910596",
       "fuente": "promociones.com.ar",
       "confianza": 75,
       "flags_fraude": [
