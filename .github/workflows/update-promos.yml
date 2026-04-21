@@ -30,11 +30,7 @@ jobs:
       
       - name: 📁 Crear directorios
         run: |
-          mkdir -p data/cache
-          mkdir -p data/history
-          mkdir -p logs
-          mkdir -p config
-          mkdir -p debug_screenshots
+          mkdir -p data/cache data/history logs config debug_screenshots
       
       - name: ⚙️ Verificar config
         run: |
@@ -72,3 +68,4 @@ jobs:
           name: debug-screenshots
           path: debug_screenshots/
           retention-days: 7
+          if-no-files-found: warn
