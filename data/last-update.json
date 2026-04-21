@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-04-21T04:33:33.618285",
+  "fecha": "2026-04-21T04:44:36.139956",
   "total_promociones": 39,
   "estadisticas": {
     "total": 39,
@@ -40,7 +40,7 @@
     "sin_tope": 7
   },
   "errores": [],
-  "tiempo_ejecucion": "86.46s",
+  "tiempo_ejecucion": "86.39s",
   "fuentes": [
     "Carrefour",
     "Jumbo",
