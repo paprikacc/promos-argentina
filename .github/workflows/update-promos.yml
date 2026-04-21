@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       
       - name: 🐍 Setup Python
         uses: actions/setup-python@v5
@@ -31,6 +33,21 @@ jobs:
       - name: 📁 Crear directorios
         run: |
           mkdir -p data/cache data/history logs config debug_screenshots
+      
+      - name: 🔍 Verificar main.py
+        run: |
+          echo "=========================================="
+          echo "📄 Verificando versión de main.py"
+          echo "=========================================="
+          head -n 5 scripts/main.py
+          echo "..."
+          echo ""
+          echo "🔎 Buscando línea clave 'scrapers.__all__':"
+          grep -n "scrapers.__all__" scripts/main.py && echo "✅ ENCONTRADO - Versión nueva" || echo "❌ NO ENCONTRADO - Versión vieja"
+          echo ""
+          echo "🔎 Buscando 'Intento':"
+          grep -n "Intento" scripts/main.py && echo "❌ ENCONTRADO - Versión vieja" || echo "✅ NO ENCONTRADO - Versión nueva"
+          echo "=========================================="
       
       - name: ⚙️ Verificar config
         run: |
