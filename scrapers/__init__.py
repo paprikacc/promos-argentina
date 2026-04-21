@@ -1,10 +1,10 @@
 """
 🕷️ Scrapers Package
-Importación segura de scrapers
+Importación segura de scrapers con reporte de errores
 """
 
 import importlib
-import os
+import sys
 
 # Lista de scrapers disponibles (nombre_archivo, NombreClase)
 SCRAPERS_REGISTRY = [
@@ -18,7 +18,6 @@ SCRAPERS_REGISTRY = [
     ('promociones_scraper', 'PromocionesScraper'),
 ]
 
-# Importar scrapers dinámicamente
 _imported = []
 _failed = []
 
@@ -29,17 +28,21 @@ for module_name, class_name in SCRAPERS_REGISTRY:
         globals()[class_name] = scraper_class
         _imported.append(class_name)
     except Exception as e:
-        _failed.append((module_name, str(e)))
+        error_msg = str(e)
+        _failed.append((module_name, class_name, error_msg))
+        # IMPRIMIR EL ERROR PARA VERLO EN LOS LOGS
+        print(f"❌ Error importando {class_name} ({module_name}): {error_msg}")
 
-# Exportar todo lo que se pudo importar
 __all__ = _imported
 
-# Mostrar estado (solo si estamos debugueando)
-if os.getenv('DEBUG_SCRAPERS') == 'true':
-    print(f"✅ Scrapers importados: {len(_imported)}")
-    for name in _imported:
-        print(f"   - {name}")
-    if _failed:
-        print(f"❌ Scrapers fallidos: {len(_failed)}")
-        for name, error in _failed:
-            print(f"   - {name}: {error}")
+# Siempre mostrar resumen
+print(f"\n📋 RESUMEN DE SCRAPERS:")
+print(f"   ✅ Importados: {len(_imported)}/{len(SCRAPERS_REGISTRY)}")
+for name in _imported:
+    print(f"      ✅ {name}")
+
+if _failed:
+    print(f"   ❌ Fallidos: {len(_failed)}/{len(SCRAPERS_REGISTRY)}")
+    for module_name, class_name, error in _failed:
+        print(f"      ❌ {class_name} ({module_name}): {error[:200]}")
+print()
