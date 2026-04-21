@@ -1,7 +1,5 @@
 {
-  "ultima_actualizacion": "2026-04-21T05:31:19.142663",
-  "total_promociones": 60,
-  "promociones": [
+  "nuevas": [
     {
       "id": "d7c3259dd7ed",
       "comercio": "Supermercados",
@@ -1410,5 +1408,10 @@
       "score": 31.5,
       "destacada": false
     }
-  ]
+  ],
+  "eliminadas": [],
+  "modificadas": [],
+  "total_nuevas": 60,
+  "total_eliminadas": 0,
+  "total_modificadas": 0
 }

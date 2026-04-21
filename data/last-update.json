@@ -1,52 +1,49 @@
 {
-  "fecha": "2026-04-21T04:44:36.139956",
-  "total_promociones": 39,
+  "fecha": "2026-04-21T05:31:19.145565",
+  "total_promociones": 60,
+  "total_destacadas": 8,
   "estadisticas": {
-    "total": 39,
+    "total": 60,
     "por_comercio": {
+      "Supermercados": 16,
       "Carrefour": 30,
+      "Coto": 3,
       "Jumbo": 8,
+      "Día": 2,
       "Makro": 1
     },
     "por_banco": {
+      "Todos Los Bancos": 52,
       "Banco Nación": 5,
-      "Todos Los Bancos": 32,
-      "Banco Galicia": 2
+      "Banco Galicia": 2,
+      "Banco Macro": 1
     },
     "por_metodo_pago": {
+      "No Especificado": 30,
+      "MODO": 12,
       "Visa": 14,
       "Mastercard": 13,
-      "American Express": 8,
-      "Naranja": 7,
-      "MODO": 7,
-      "Mercado Pago": 11,
-      "Cuenta DNI": 5,
-      "Débito": 11,
       "Crédito": 19,
-      "No Especificado": 15,
+      "American Express": 8,
+      "Débito": 11,
+      "Naranja": 7,
+      "Mercado Pago": 12,
+      "Cuenta DNI": 5,
       "Cabal": 1
     },
     "por_dia": {
-      "Lunes": 9,
+      "Todos los días": 29,
+      "Viernes": 9,
       "Martes": 25,
-      "Miércoles": 19,
-      "Jueves": 7,
-      "Viernes": 6,
-      "Sábado": 7,
+      "Miércoles": 20,
       "Domingo": 22,
-      "Todos los días": 12
+      "Lunes": 9,
+      "Jueves": 7,
+      "Sábado": 7
     },
-    "con_tope": 32,
-    "sin_tope": 7
+    "con_tope": 44,
+    "sin_tope": 16
   },
   "errores": [],
-  "tiempo_ejecucion": "86.39s",
-  "fuentes": [
-    "Carrefour",
-    "Jumbo",
-    "Día",
-    "Coto",
-    "Makro",
-    "MODO"
-  ]
+  "tiempo_ejecucion": "156.01s"
 }
