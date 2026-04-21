@@ -1,7 +1,4 @@
-"""
-🧠 CEREBRO PRINCIPAL - Ejecuta TODOS los scrapers dinámicamente
-"""
-
+"""Cerebro principal - Ejecuta todos los scrapers dinamicamente"""
 import sys
 import os
 import time
@@ -23,7 +20,6 @@ from scripts.promo_scorer import PromoScorer
 from scripts.fraud_detector import FraudDetector
 from scripts.change_detector import ChangeDetector
 
-# === CARGAR TODOS LOS SCRAPERS DINÁMICAMENTE ===
 import scrapers
 SCRAPER_CLASSES = [getattr(scrapers, name) for name in scrapers.__all__]
 print(f"🚀 {len(SCRAPER_CLASSES)} scrapers a ejecutar: {scrapers.__all__}\n")
@@ -55,8 +51,7 @@ class Orchestrator:
         print("=" * 70 + "\n")
         ensure_directories()
 
-        # FASE 1: Scrapear
-        print("🚀 FASE 1: EXTRACCIÓN DE DATOS")
+        print("🚀 FASE 1: EXTRACCION DE DATOS")
         print("=" * 70)
         for cls in SCRAPER_CLASSES:
             try:
@@ -76,11 +71,10 @@ class Orchestrator:
                 self.errors.append(str(e))
 
         print(f"\n======================================================================")
-        print(f"📊 Total extraído: {len(self.promos)} promociones brutas")
+        print(f"📊 Total extraido: {len(self.promos)} promociones brutas")
         print(f"======================================================================")
 
-        # FASE 2: Normalizar
-        print("\n🔧 FASE 2: NORMALIZACIÓN DE DATOS")
+        print("\n🔧 FASE 2: NORMALIZACION DE DATOS")
         print("=" * 70)
         norm = []
         for p in self.promos:
@@ -91,33 +85,27 @@ class Orchestrator:
         self.promos = norm
         print(f"   ✅ {len(self.promos)} promociones normalizadas")
 
-        # FASE 3: Deduplicar
-        print("\n🔄 FASE 3: DEDUPLICACIÓN")
+        print("\n🔄 FASE 3: DEDUPLICACION")
         print("=" * 70)
         self.promos = self.deduplicator.deduplicate(self.promos)
 
-        # FASE 4: Limpiar
-        print("\n🧹 FASE 4: LIMPIEZA Y VALIDACIÓN")
+        print("\n🧹 FASE 4: LIMPIEZA Y VALIDACION")
         print("=" * 70)
         self.promos = self.cleaner.clean_all(self.promos)
 
-        # FASE 5: Fraude
-        print("\n🛡️ FASE 5: DETECCIÓN DE FRAUDE")
+        print("\n🛡️ FASE 5: DETECCION DE FRAUDE")
         print("=" * 70)
         self.promos = self.fraud.filter_promos(self.promos, min_confianza=50)
 
-        # FASE 6: Scoring
         print("\n⭐ FASE 6: SCORING")
         print("=" * 70)
         self.promos = self.scorer.score_all(self.promos)
 
-        # FASE 7: Cambios
         print("\n🔔 FASE 7: CAMBIOS")
         print("=" * 70)
         ch = self.changes.detect_changes(self.promos)
         save_json(ch, 'data/cambios.json')
 
-        # FASE 8: Guardar
         print("\n💾 FASE 8: GUARDANDO DATOS")
         print("=" * 70)
         save_json({
@@ -146,7 +134,6 @@ class Orchestrator:
         }, 'data/last-update.json')
         print_stats(stats)
 
-        # Final
         elapsed = time.time() - self.t0
         print(f"\n======================================================================")
         print(f"✅ PROCESO COMPLETADO")
