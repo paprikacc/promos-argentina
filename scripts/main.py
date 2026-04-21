@@ -1,270 +1,152 @@
-  """ 
-🧠  CEREBRO PRINCIPAL DEL PROYECTO
-Coordina todos los scrapers, limpia datos y genera archivos finales
-"""
-
+"""Cerebro principal - Ejecuta todos los scrapers dinamicamente"""
 import sys
 import os
+import time
 from datetime import datetime
 from pathlib import Path
-import time
 
-# Agregar directorio raíz al path
-sys.path.insert(0, str(Path(__file__).parent.parent))
+ROOT_DIR = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT_DIR))
 
-# Importar módulos propios
+from scripts.utils import (
+    ensure_directories, save_json, save_csv, load_config,
+    log_message, generate_stats, print_stats
+)
 from scripts.normalizer import DataNormalizer
 from scripts.deduplicator import PromoDeduplicator
 from scripts.data_cleaner import DataCleaner
-from scripts.utils import (
-    ensure_directories,
-    save_json,
-    save_csv,
-    load_config,
-    log_message,
-    generate_stats,
-    print_stats
-)
+from scripts.cache_manager import CacheManager
+from scripts.promo_scorer import PromoScorer
+from scripts.fraud_detector import FraudDetector
+from scripts.change_detector import ChangeDetector
 
-# Importar scrapers
-from scrapers import (
-    CarrefourScraper,
-    JumboScraper,
-    DiaScraper,
-    CotoScraper,
-    MakroScraper,
-    ModoScraper
-)
+import scrapers
+SCRAPER_CLASSES = [getattr(scrapers, name) for name in scrapers.__all__]
+print(f"🚀 {len(SCRAPER_CLASSES)} scrapers a ejecutar: {scrapers.__all__}\n")
 
-class PromoScraperOrchestrator:
-    """Orquestador principal del sistema de scraping"""
-    
+
+class Orchestrator:
     def __init__(self):
         self.config = load_config()
         self.normalizer = DataNormalizer()
         self.deduplicator = PromoDeduplicator()
         self.cleaner = DataCleaner(self.config)
-        self.all_promos = []
+        self.cache = CacheManager(self.config)
+        self.scorer = PromoScorer(self.config)
+        self.fraud = FraudDetector(self.config)
+        self.changes = ChangeDetector()
+        self.promos = []
         self.errors = []
-        self.start_time = None
+        self.t0 = None
         self.headless = os.getenv('HEADLESS', 'true').lower() == 'true'
-    
-    def initialize(self):
-        """Inicializa el sistema"""
+        self.use_cache = os.getenv('USE_CACHE', 'true').lower() == 'true'
+
+    def run(self):
+        self.t0 = time.time()
         print("=" * 70)
         print("🛒 SISTEMA DE SCRAPING DE PROMOCIONES ARGENTINA")
         print("=" * 70)
         print(f"⏰ Inicio: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"🖥️  Modo: {'Headless' if self.headless else 'Con interfaz'}")
         print("=" * 70 + "\n")
-        
         ensure_directories()
-        log_message("="*50)
-        log_message("Iniciando proceso de scraping")
-        self.start_time = time.time()
-    
-    def get_scrapers(self):
-        """Retorna lista de scrapers a ejecutar"""
-        return [
-            CarrefourScraper(self.headless),
-            JumboScraper(self.headless),
-            DiaScraper(self.headless),
-            CotoScraper(self.headless),
-            MakroScraper(self.headless),
-            ModoScraper(self.headless)
-        ]
-    
-    def run_scraper(self, scraper):
-        """Ejecuta un scraper individual con manejo de errores"""
-        comercio = scraper.comercio_name
-        retry_attempts = self.config.get('scraping', {}).get('retry_attempts', 3)
-        
-        for attempt in range(retry_attempts):
+
+        print("🚀 FASE 1: EXTRACCION DE DATOS")
+        print("=" * 70)
+        for cls in SCRAPER_CLASSES:
             try:
-                print(f"\n{'─' * 70}")
-                print(f"🔍 Scrapeando: {comercio} (Intento {attempt + 1}/{retry_attempts})")
-                print(f"{'─' * 70}")
-                
-                promos = scraper.run()
-                
-                if promos:
-                    log_message(f"✅ {comercio}: {len(promos)} promociones extraídas")
-                    return promos
+                scraper = cls(self.headless)
+                nombre = scraper.comercio_name
+                print(f"\n──────────────────────────────────────────────────────────────────────")
+                print(f"🔍 Scrapeando: {nombre}")
+                print(f"──────────────────────────────────────────────────────────────────────")
+                resultado = scraper.run()
+                if resultado:
+                    self.promos.extend(resultado)
                 else:
                     print(f"   ⚠️ No se encontraron promociones")
-                    log_message(f"⚠️ {comercio}: Sin promociones")
-                    return []
-                
+                time.sleep(2)
             except Exception as e:
-                error_msg = f"Error en {comercio} (intento {attempt + 1}): {str(e)}"
-                print(f"   ❌ {error_msg}")
-                log_message(f"❌ {error_msg}")
-                
-                if attempt < retry_attempts - 1:
-                    wait_time = 5 * (attempt + 1)
-                    print(f"   ⏳ Esperando {wait_time}s antes de reintentar...")
-                    time.sleep(wait_time)
-                else:
-                    self.errors.append(error_msg)
-                    return []
-        
-        return []
-    
-    def run_all_scrapers(self):
-        """Ejecuta todos los scrapers"""
-        print("\n🚀 FASE 1: EXTRACCIÓN DE DATOS")
+                print(f"   ❌ Error: {str(e)[:200]}")
+                self.errors.append(str(e))
+
+        print(f"\n======================================================================")
+        print(f"📊 Total extraido: {len(self.promos)} promociones brutas")
+        print(f"======================================================================")
+
+        print("\n🔧 FASE 2: NORMALIZACION DE DATOS")
         print("=" * 70)
-        
-        scrapers = self.get_scrapers()
-        delay = self.config.get('scraping', {}).get('delay_between_scrapers', 2000) / 1000
-        
-        for i, scraper in enumerate(scrapers):
-            promos = self.run_scraper(scraper)
-            self.all_promos.extend(promos)
-            
-            # Delay entre scrapers (excepto el último)
-            if i < len(scrapers) - 1:
-                print(f"\n⏳ Esperando {delay}s antes del siguiente scraper...")
-                time.sleep(delay)
-        
-        print(f"\n{'=' * 70}")
-        print(f"📊 Total extraído: {len(self.all_promos)} promociones brutas")
-        print(f"{'=' * 70}")
-        log_message(f"Total extraído: {len(self.all_promos)} promociones")
-    
-    def normalize_data(self):
-        """Normaliza todos los datos"""
-        print("\n🔧 FASE 2: NORMALIZACIÓN DE DATOS")
-        print("=" * 70)
-        
-        normalized_promos = []
-        
-        for promo in self.all_promos:
+        norm = []
+        for p in self.promos:
             try:
-                normalized = self.normalizer.normalize_promo(promo)
-                normalized_promos.append(normalized)
-            except Exception as e:
-                print(f"   ⚠️ Error normalizando promo: {e}")
-                log_message(f"Error normalizando promo: {e}")
-        
-        self.all_promos = normalized_promos
-        print(f"   ✅ {len(self.all_promos)} promociones normalizadas")
-        log_message(f"Normalizadas: {len(self.all_promos)}")
-    
-    def deduplicate_data(self):
-        """Elimina duplicados"""
-        print("\n🔄 FASE 3: DEDUPLICACIÓN")
+                norm.append(self.normalizer.normalize_promo(p))
+            except:
+                pass
+        self.promos = norm
+        print(f"   ✅ {len(self.promos)} promociones normalizadas")
+
+        print("\n🔄 FASE 3: DEDUPLICACION")
         print("=" * 70)
-        
-        self.all_promos = self.deduplicator.deduplicate(self.all_promos)
-        log_message(f"Después de deduplicar: {len(self.all_promos)}")
-    
-    def clean_data(self):
-        """Limpia y valida datos"""
-        print("\n🧹 FASE 4: LIMPIEZA Y VALIDACIÓN")
+        self.promos = self.deduplicator.deduplicate(self.promos)
+
+        print("\n🧹 FASE 4: LIMPIEZA Y VALIDACION")
         print("=" * 70)
-        
-        self.all_promos = self.cleaner.clean_all(self.all_promos)
-        log_message(f"Después de limpiar: {len(self.all_promos)}")
-    
-    def save_data(self):
-        """Guarda los datos en archivos"""
-        print("\n💾 FASE 5: GUARDANDO DATOS")
+        self.promos = self.cleaner.clean_all(self.promos)
+
+        print("\n🛡️ FASE 5: DETECCION DE FRAUDE")
         print("=" * 70)
-        
-        # Preparar datos para JSON principal
-        output_data = {
+        self.promos = self.fraud.filter_promos(self.promos, min_confianza=50)
+
+        print("\n⭐ FASE 6: SCORING")
+        print("=" * 70)
+        self.promos = self.scorer.score_all(self.promos)
+
+        print("\n🔔 FASE 7: CAMBIOS")
+        print("=" * 70)
+        ch = self.changes.detect_changes(self.promos)
+        save_json(ch, 'data/cambios.json')
+
+        print("\n💾 FASE 8: GUARDANDO DATOS")
+        print("=" * 70)
+        save_json({
             'ultima_actualizacion': datetime.now().isoformat(),
-            'total_promociones': len(self.all_promos),
-            'promociones': self.all_promos
-        }
-        
-        # Guardar JSON principal
-        save_json(output_data, 'data/promos.json')
-        
-        # Guardar CSV
-        save_csv(self.all_promos, 'data/promos.csv')
-        
-        # Generar y guardar estadísticas
-        stats = generate_stats(self.all_promos)
-        
-        # Guardar metadata
-        metadata = {
+            'total_promociones': len(self.promos),
+            'promociones': self.promos
+        }, 'data/promos.json')
+
+        dest = self.scorer.get_destacadas(self.promos)
+        save_json({
+            'ultima_actualizacion': datetime.now().isoformat(),
+            'total_destacadas': len(dest),
+            'promociones': dest
+        }, 'data/promos_destacadas.json')
+
+        save_csv(self.promos, 'data/promos.csv')
+        stats = generate_stats(self.promos)
+        save_json(stats, 'data/stats.json')
+        save_json({
             'fecha': datetime.now().isoformat(),
-            'total_promociones': len(self.all_promos),
+            'total_promociones': len(self.promos),
+            'total_destacadas': len(dest),
             'estadisticas': stats,
             'errores': self.errors,
-            'tiempo_ejecucion': f"{time.time() - self.start_time:.2f}s",
-            'fuentes': [
-                'Carrefour',
-                'Jumbo',
-                'Día',
-                'Coto',
-                'Makro',
-                'MODO'
-            ]
-        }
-        save_json(metadata, 'data/last-update.json')
-        
-        # Guardar estadísticas detalladas
-        save_json(stats, 'data/stats.json')
-        
-        print("\n")
+            'tiempo_ejecucion': f"{time.time() - self.t0:.2f}s"
+        }, 'data/last-update.json')
         print_stats(stats)
-        
-        log_message(f"Datos guardados exitosamente: {len(self.all_promos)} promociones")
-    
-    def finalize(self):
-        """Finaliza el proceso"""
-        elapsed_time = time.time() - self.start_time
-        
-        print("\n" + "=" * 70)
-        print("✅ PROCESO COMPLETADO")
-        print("=" * 70)
-        print(f"⏱️  Tiempo total: {elapsed_time:.2f} segundos")
-        print(f"📊 Promociones finales: {len(self.all_promos)}")
-        print(f"❌ Errores: {len(self.errors)}")
-        
-        if self.errors:
-            print("\n⚠️  Errores encontrados:")
-            for error in self.errors:
-                print(f"   • {error}")
-        
-        print("\n🎉 Sistema listo para usar!")
-        print(f"📁 Archivos generados en: ./data/")
-        print("=" * 70)
-        
-        log_message(f"Proceso completado en {elapsed_time:.2f}s")
-        log_message(f"Total final: {len(self.all_promos)} promociones")
-        log_message("="*50)
-    
-    def run(self):
-        """Ejecuta el proceso completo"""
-        try:
-            self.initialize()
-            self.run_all_scrapers()
-            self.normalize_data()
-            self.deduplicate_data()
-            self.clean_data()
-            self.save_data()
-            self.finalize()
-            return True
-        except KeyboardInterrupt:
-            print("\n\n⚠️ Proceso interrumpido por el usuario")
-            log_message("Proceso interrumpido por el usuario")
-            return False
-        except Exception as e:
-            print(f"\n\n❌ Error crítico: {e}")
-            log_message(f"Error crítico: {e}")
-            import traceback
-            traceback.print_exc()
-            return False
+
+        elapsed = time.time() - self.t0
+        print(f"\n======================================================================")
+        print(f"✅ PROCESO COMPLETADO")
+        print(f"======================================================================")
+        print(f"⏱️  Tiempo: {elapsed:.2f}s | 📊 Promos: {len(self.promos)} | ❌ Errores: {len(self.errors)}")
+        print(f"======================================================================")
+
 
 def main():
-    """Punto de entrada principal"""
-    orchestrator = PromoScraperOrchestrator()
-    success = orchestrator.run()
-    sys.exit(0 if success else 1)
+    orch = Orchestrator()
+    orch.run()
+    sys.exit(0)
+
 
 if __name__ == "__main__":
     main()
