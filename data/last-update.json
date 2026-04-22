@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-04-21T10:13:20.704216",
+  "fecha": "2026-04-22T10:13:37.392526",
   "total_promociones": 60,
   "total_destacadas": 8,
   "estadisticas": {
@@ -15,8 +15,9 @@
     "por_banco": {
       "Todos Los Bancos": 52,
       "Banco Nación": 5,
-      "Banco Galicia": 2,
-      "Banco Macro": 1
+      "Banco Galicia": 1,
+      "Banco Macro": 1,
+      "Banco Santander": 1
     },
     "por_metodo_pago": {
       "No Especificado": 30,
@@ -25,7 +26,7 @@
       "Mastercard": 13,
       "Crédito": 19,
       "American Express": 8,
-      "Débito": 11,
+      "Débito": 10,
       "Naranja": 7,
       "Mercado Pago": 12,
       "Cuenta DNI": 5,
@@ -45,5 +46,5 @@
     "sin_tope": 16
   },
   "errores": [],
-  "tiempo_ejecucion": "158.93s"
+  "tiempo_ejecucion": "150.08s"
 }

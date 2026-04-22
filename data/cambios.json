@@ -1,6 +1,77 @@
 {
-  "nuevas": [],
-  "eliminadas": [],
+  "nuevas": [
+    {
+      "id": "1b05379ac784",
+      "comercio": "Jumbo",
+      "banco": "Banco Santander",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Naranja",
+        "MODO",
+        "Mercado Pago",
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Por día Por banco Cenco Pay Planes de Financiación Lunes Martes Miércoles Jueves Viernes Sábado 20% Dto. 3 Cuotas Sin Interés Exclusivo Online PROMOCIÓN VÁLIDA CON LA TARJETA DE CRÉDITO FÍSICA CENCOPAY SOLO LOS DÍAS MIÉRCOLES DESDE EL 01012026 AL 30042026 EN LOS SITIOS WEB OBTENIENDO",
+      "tope": "$30",
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-04-22T10:11:55.749981",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 57.5,
+      "destacada": false
+    }
+  ],
+  "eliminadas": [
+    {
+      "id": "4348704b0ea1",
+      "comercio": "Jumbo",
+      "banco": "Banco Galicia",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Naranja",
+        "MODO",
+        "Mercado Pago",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Por día Por banco Cenco Pay Planes de Financiación Lunes Martes Miércoles Jueves Viernes Sábado 20% Dto. pagando con MODO Participan Banco Santander (solo con Visa), Banco Nación, Banco Galicia, Banco BBVA, Banco Macro, Banco Santa Fe, Banco Entre Ríos, Banco San Juan, Banco Santa Cruz, B",
+      "tope": "$15.000",
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-04-21T10:11:34.485004",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    }
+  ],
   "modificadas": [
     {
       "promo": {
@@ -18,7 +89,7 @@
         ],
         "vigencia": "Consultar vigencia",
         "url": "https://www.promociones.com.ar/category/supermercados/",
-        "actualizado": "2026-04-21T10:13:17.910695",
+        "actualizado": "2026-04-22T10:13:34.560697",
         "fuente": "promociones.com.ar",
         "confianza": 100,
         "flags_fraude": [],
@@ -59,7 +130,7 @@
         ],
         "vigencia": "Ver condiciones",
         "url": "https://www.carrefour.com.ar/descuentos-bancarios",
-        "actualizado": "2026-04-21T10:11:06.129662",
+        "actualizado": "2026-04-22T10:11:30.341309",
         "fuente": "carrefour_oficial",
         "confianza": 100,
         "flags_fraude": [],
@@ -89,7 +160,7 @@
       ]
     }
   ],
-  "total_nuevas": 0,
-  "total_eliminadas": 0,
+  "total_nuevas": 1,
+  "total_eliminadas": 1,
   "total_modificadas": 2
 }

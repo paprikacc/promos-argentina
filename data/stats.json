@@ -11,8 +11,9 @@
   "por_banco": {
     "Todos Los Bancos": 52,
     "Banco Nación": 5,
-    "Banco Galicia": 2,
-    "Banco Macro": 1
+    "Banco Galicia": 1,
+    "Banco Macro": 1,
+    "Banco Santander": 1
   },
   "por_metodo_pago": {
     "No Especificado": 30,
@@ -21,7 +22,7 @@
     "Mastercard": 13,
     "Crédito": 19,
     "American Express": 8,
-    "Débito": 11,
+    "Débito": 10,
     "Naranja": 7,
     "Mercado Pago": 12,
     "Cuenta DNI": 5,
