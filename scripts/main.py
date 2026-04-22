@@ -1,6 +1,7 @@
 """Cerebro principal - Ejecuta todos los scrapers dinamicamente"""
 import sys
 import os
+import json
 import time
 from datetime import datetime
 from pathlib import Path
@@ -105,6 +106,18 @@ class Orchestrator:
         print("=" * 70)
         ch = self.changes.detect_changes(self.promos)
         save_json(ch, 'data/cambios.json')
+        
+               # 🛡️ FAIL-SAFE: Si no hay promos, mantener las del día anterior
+        if len(self.promos) == 0:
+            print("\n⚠️ 0 promociones extraídas. Manteniendo datos del día anterior...")
+            promos_path = Path('data/promos.json')
+            if promos_path.exists():
+                with open(promos_path, 'r', encoding='utf-8') as f:
+                    datos_anteriores = json.load(f)
+                    self.promos = datos_anteriores.get('promociones', [])
+                print(f"✅ Se usan {len(self.promos)} promociones del día anterior")
+            else:
+                print("⚠️ No hay datos anteriores. Se guardará archivo vacío.")
 
         print("\n💾 FASE 8: GUARDANDO DATOS")
         print("=" * 70)
