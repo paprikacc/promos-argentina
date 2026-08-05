@@ -1,0 +1,1953 @@
+{
+  "fecha": "2026-08-05T11:13:57.899268",
+  "total": 86,
+  "promociones": [
+    {
+      "id": "ffb179ed9618",
+      "comercio": "Jumbo",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "60%",
+      "descripcion": "Regreso a Clases60% en Mochilas, Útiles y más",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-08-05T11:11:39.942008",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 88.0,
+      "destacada": true
+    },
+    {
+      "id": "d7c3259dd7ed",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "75%",
+      "descripcion": "Bancos: Todos Comercios: Todos Solo con promos Solo hoy ZOOM 75%",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967429",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 88.0,
+      "destacada": true
+    },
+    {
+      "id": "2a7684209ba0",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "30% de descuento",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:15.876907",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 76.0,
+      "destacada": true
+    },
+    {
+      "id": "64838e4f4507",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "35%DTO",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:06.737740",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 76.0,
+      "destacada": true
+    },
+    {
+      "id": "cfb7b83a9b61",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "30%DTO",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:10.004363",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 76.0,
+      "destacada": true
+    },
+    {
+      "id": "b628965e7c04",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Naranja",
+        "Visa"
+      ],
+      "beneficio": "30%",
+      "descripcion": "L M M J V S D 30% DE DESCUENTO En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA. Tope de reintegro $12.000 por semana para clientes adheridos a Plan Épico de Naran",
+      "tope": "$20.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.256253",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 75.5,
+      "destacada": true
+    },
+    {
+      "id": "695c71b70e87",
+      "comercio": "Jumbo",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "Naranja",
+        "MODO",
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Por día Por banco Cenco Pay Planes de Financiación Lunes Martes Miércoles Jueves Viernes Sábado 20% Dto. 3 Cuotas Sin Interés Exclusivo Online PROMOCIÓN VÁLIDA CON LA TARJETA DE CRÉDITO FÍSICA CENCOPAY SOLO LOS DÍAS MIÉRCOLES DESDE EL 01012026 AL 31082026 EN LOS SITIOS WEB OBTENIENDO",
+      "tope": null,
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-08-05T11:11:39.951691",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 75.0,
+      "destacada": true
+    },
+    {
+      "id": "def38f7e8893",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "35% Tope de devolución $25.000",
+      "tope": "$25.000",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:15.775115",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "64838e4f4507",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "LLEVANDO 2 35%DTO Manteca CIUDAD DEL LAGO 200g PRECIO CON 35%DTO $2.298,87 Precio Regular: $3.649,00 Precio sin impuestos nacionales: $3.015,70 Precio por 1 Kilo : $18.245,00 Agregar Ver planes de cuo",
+      "tope": "$229.887",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:06.621777",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "cfb7b83a9b61",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "30%DTO EXCLUSIVO DIGITAL Auriculares TOP HOUSE Tw912 Negro PRECIO CON 30%DTO $26.599,30 Precio Regular: $37.999,00 Precio sin impuestos nacionales: $31.404,13 6 cuotas sin interés de $4.433,22 Ver pro",
+      "tope": "$2.659.930",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:09.975871",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "43db405e9ae3",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "30%",
+      "descripcion": "8 CADENA DAR 30% Tope: $12.000  en la 1ra transacción de cada semana Pagando con Modo L M X J V S D",
+      "tope": "$12.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967194",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "21c86652eba7",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "9 ARCOIRIS 30% Tope: $15.000  por semana L M X J V S D",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967240",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "ca8efdc12ddd",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "30 BANCOS  17 COMERCIOS  158 PROMOCIONES  35% DTO MÁXIMO  22% DTO PROMEDIO  $24.440 TOPE PROM. MENSUAL  8 CUOTAS PROMEDIO",
+      "tope": "$24.440",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967343",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "326896733cb1",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "35%",
+      "descripcion": "35% Tope: $15.000 por semana Pagando con Modo L M X J V S D",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967875",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "ca8efdc12ddd",
+      "comercio": "Supermercados",
+      "banco": "Banco Ciudad",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "35% Tope: $20.000 x cuenta x mes App ciudad L M X J V S D",
+      "tope": "$20.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.968203",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "62d7e14c686a",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "30%",
+      "descripcion": "Todos los Miércoles de Agosto Comprando en: 30% de Ahorro 30% de Ahorro con tarjeta de débito y en un pago con tarjeta de crédito Visa - Exclusivo para clientes con plan sueldo singular Tope de devolución (POR MES Y POR CUENTA) $ 20.000 - NO INCLUYE ELECTRODOMESTICOS, ELECTRONICA, TELEFONIA CELULA",
+      "tope": "$20.000",
+      "dias": [
+        "Domingo",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:14.169732",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "469eb3874836",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "25% De descuento",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:15.347514",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "65ae84f23310",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "25%DTO",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:07.140457",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "1d0d686b429f",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "L M M J V S D 20% DE DESCUENTO En un pago con tarjetas de crédito TCI Sin tope de reintegro. Aplican exclusiones. Ver legal. Digital",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:26.220219",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "569405248466",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "22%",
+      "descripcion": "22% DTO PROMEDIO",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967399",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "04db8e110920",
+      "comercio": "Carrefour",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "MODO",
+        "Mercado Pago",
+        "Cuenta DNI",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Comprando en: POR DÍA POR BANCOTARJETA CARREFOUR BANCO Todos los Jueves de Agosto Comprando en: 20% De descuento 20% de descuento en un pago con Cuenta Digital de Carrefour Banco Descuento aplicado en el acto. Tope de devolución $10.000. NO INCLUYE CARNICERÍA, FRUTAS, VERDURAS, ELECTROS, BAZAR,",
+      "tope": "$10.000",
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.207789",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    },
+    {
+      "id": "2c71db459457",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "Naranja",
+        "Visa"
+      ],
+      "beneficio": "25%",
+      "descripcion": "L M M J V S D 25% DE DESCUENTO En un pago con tarjetas débito Visa. Cartera general con tope de reintegro $ 13.000, para Segmento Unico tope de reintegro $ 18.000 por transacción. Aplican ex",
+      "tope": "$13.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.388823",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    },
+    {
+      "id": "b5ff9464412d",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Naranja",
+        "Visa"
+      ],
+      "beneficio": "20%",
+      "descripcion": "L M M J V S D 20% DE DESCUENTO En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA. Tope de reintegro: $3.000 por semana para clientes adheridos a planes de suscripci",
+      "tope": "$25.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.504353",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    },
+    {
+      "id": "8c3e133611e0",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "25%",
+      "descripcion": "L M M J V S D 25% DE DESCUENTO En un pago con tarjetas de crédito Visa, Mastercard y Cabal Aplica exclusiones. Ver legales. Tope de Reintegro $10.000 por transacción. Digital",
+      "tope": "$10.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:22.157182",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    },
+    {
+      "id": "d8aa1fc6279f",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "Visa"
+      ],
+      "beneficio": "35%",
+      "descripcion": "Programando la entrega de tu pedido para los días Miércoles de Agosto Comprando en: 35% Tope de devolución $25.000 35% de descuento en un pago con tarjeta de debitó y crédito Visa del Banco Patagonia Exclusivo para clientes con plan sueldo singular Con tarjeta debito y en un pago con tarjeta de cr",
+      "tope": "$25.000",
+      "dias": [
+        "Domingo",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:15.737973",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 65.0,
+      "destacada": false
+    },
+    {
+      "id": "9730ae42a35c",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "20%",
+      "descripcion": "20% De descuento 20% de descuento en un pago con Cuenta Digital de Carrefour Banco Descuento aplicado en el acto. Tope de devolución $10.000. NO INCLUYE CARNICERÍA, FRUTAS, VERDURAS, ELECTROS, BAZAR, TEXTIL, OFERTÓN POR BULTO, PACK FAMILIAR NI PRECIO SÚPER BAJO TODOS LOS DÍAS.",
+      "tope": "$10.000",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.300116",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "8585007f9588",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "6 EL TÚNEL 25% Tope: $15.000  x transacción x única vez",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967137",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "a0f1bc858903",
+      "comercio": "Makro",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "20%",
+      "descripcion": "10 MAKRO 20% Tope: $15.000  x cuenta x mes Pagando con Modo L M X J V S D",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967285",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "5ebd99123af5",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "20%",
+      "descripcion": "20% Tope: $25.000 x cuenta x mes Min. de compra $100.000 L M X J V S D",
+      "tope": "$25.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967772",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "24f1ed0aa998",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "25%",
+      "descripcion": "25% Tope: $15.000 x cuenta x mes Pagando con Modo L M X J V S D",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967800",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "eb83455e1f99",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "20%",
+      "descripcion": "20% Tope: $10.000 por semana Pagando con Modo L M X J V S D",
+      "tope": "$10.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.968087",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "4ee7b997f3a7",
+      "comercio": "Día",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "25% 3 cuotas sin interés Tope: $15.000 x transacción x única vez TODOS LOS DÍAS",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.968930",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "cf5a0f6a1aa7",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Todos los Miércoles de Agosto Comprando en: 20% de Ahorro 20% de Ahorro con tarjeta de débito y en un pago con tarjeta de crédito Visa, Mastercard y Amex - Exclusivo para clientes con plan sueldo plus Tope de devolución (POR MES Y POR CUENTA) $ 15.000 - NO INCLUYE ELECTRODOMESTICOS, ELECTRONICA, T",
+      "tope": "$15.000",
+      "dias": [
+        "Domingo",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:13.595761",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.0,
+      "destacada": false
+    },
+    {
+      "id": "9d85e796c2ff",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "15%",
+      "descripcion": "15%DTO",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:10.105177",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.0,
+      "destacada": false
+    },
+    {
+      "id": "04761ed911af",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "15%",
+      "descripcion": "15% Sin tope Seleccionados L M X J V S D",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967718",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.0,
+      "destacada": false
+    },
+    {
+      "id": "9a8ade71b5e5",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "10%",
+      "descripcion": "10% Sin tope L M X J V S D",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967752",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.0,
+      "destacada": false
+    },
+    {
+      "id": "fbd9bdd0cced",
+      "comercio": "Makro",
+      "banco": "Banco Galicia",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Cabal",
+        "Naranja",
+        "MODO",
+        "Mercado Pago",
+        "Cuenta DNI",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "10%",
+      "descripcion": "BANCARIAS Descubrí las mejores promociones bancarias día a día. Encontrá las ofertas que necesitas para ahorrar al máximo. TodasLunesMartesMiércolesJuevesViernesSábadoDomingo Todos los Viernes y Sáb",
+      "tope": "$20.000",
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Consultar condiciones",
+      "url": "https://makro.com.ar/beneficios-bancarios/",
+      "actualizado": "2026-08-05T11:12:33.611874",
+      "fuente": "makro_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 59.5,
+      "destacada": false
+    },
+    {
+      "id": "34b3e5e42d3e",
+      "comercio": "Jumbo",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "40%",
+      "descripcion": "Especial de la SemanaHasta 40% en PerfumeríaHasta 40% en LimpiezaHasta 30% en FrescosHasta 35% en CervezasHasta 40% en Fideos y Salsas",
+      "tope": "$40",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-08-05T11:11:39.861622",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 58.5,
+      "destacada": false
+    },
+    {
+      "id": "18a6b95462bd",
+      "comercio": "Jumbo",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "Hasta 30% en Frescos",
+      "tope": "$30",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-08-05T11:11:39.875341",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 58.5,
+      "destacada": false
+    },
+    {
+      "id": "7c5bfb42d304",
+      "comercio": "Jumbo",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "Hasta 35% en Cervezas",
+      "tope": "$35",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-08-05T11:11:39.879204",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 58.5,
+      "destacada": false
+    },
+    {
+      "id": "86f6a8d300ab",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Mercado Pago"
+      ],
+      "beneficio": "25%",
+      "descripcion": "SUPERMERCADOS Viernes de Ahorro en COTO: 25% de descuento con Mercado Pago sin tope y promos imperdibles 30 ENERO, 2026",
+      "tope": null,
+      "dias": [
+        "Viernes"
+      ],
+      "vigencia": "Consultar vigencia",
+      "url": "https://www.promociones.com.ar/category/supermercados/",
+      "actualizado": "2026-08-05T11:13:55.098484",
+      "fuente": "promociones.com.ar",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 57.5,
+      "destacada": false
+    },
+    {
+      "id": "02807d195323",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Mastercard",
+        "Mercado Pago",
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Comprando todos los Jueves de Agosto Comprando en: 20% de descuento 20% de descuento en un pago con Tarjeta de crédito de Carrefour Banco y Cuenta Digital de Carrefour Banco Descuento aplicado en el acto. Tope de devolución $10.000 Ver legal -DESCUENTO EXCLUSIVO ABONANDO CON TARJETA DE CRÉDITO MA",
+      "tope": "$10.000",
+      "dias": [
+        "Martes",
+        "Jueves",
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.631786",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 57.0,
+      "destacada": false
+    },
+    {
+      "id": "818d1b314d0c",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "Visa"
+      ],
+      "beneficio": "25%",
+      "descripcion": "Programando la entrega de tu pedido para los días Miércoles de Agosto Comprando en: 25% De descuento 25% de descuento en un pago con tarjeta de debitó y crédito Visa del Banco Patagonia Tope de devolución: $20.000 Ver legal -DESCUENTO EXCLUSIVO PARA CLIENTES CON PLAN SUELDO COMPRANDO LOS DÍAS MIÉ",
+      "tope": "$20.000",
+      "dias": [
+        "Domingo",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:15.309926",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 57.0,
+      "destacada": false
+    },
+    {
+      "id": "a9364c82895d",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Mastercard",
+        "Mercado Pago"
+      ],
+      "beneficio": "15%",
+      "descripcion": "Todos los lunes y martes de Agosto Comprando en: 15% de descuento 15% de descuento. Exclusivo con Tarjeta de crédito Carrefour Banco En el acto y sin tope No incluye electro ni carnicería. No acumulable con otras promociones yó folletos vigentes. Ver legal EXCLUSIVO EN LOS LOCALES DE BANDERA CO",
+      "tope": "$20.000",
+      "dias": [
+        "Domingo",
+        "Jueves",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Sábado",
+        "Viernes"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:13.118857",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 56.5,
+      "destacada": false
+    },
+    {
+      "id": "fa58bf69d0cb",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "12 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 12 CUOTAS SIN INTERÉS 3-6-9-12 cuotas sin interés con tarjetas de crédito Visa, Mastercard y American express. Prod. Seleccionados de ferretería, automotor, juguetería, deportes, campi",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:10.675745",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "e704e6f87e6e",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "3-6-9-12 cuotas sin interés con tarjetas de crédito Visa, Mastercard y American express.",
+      "descripcion": "3-6-9-12 cuotas sin interés con tarjetas de crédito Visa, Mastercard y American express.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:10.788897",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "4bd7ef0107ba",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito Visa y Mastercard.",
+      "descripcion": "SGTO IDENTITÉ En un pago con tarjetas de crédito Visa y Mastercard.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.322327",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "f959e759ea23",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito",
+        "Débito",
+        "Visa"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito y débito Visa",
+      "descripcion": "En un pago con tarjetas de crédito Cabal y Débito Cabal",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.557967",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "a948932b505b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "PLAN SUELDO En un pago con tarjetas de crédito Visa, Mastercard y Visa débito.",
+      "descripcion": "PLAN SUELDO En un pago con tarjetas de crédito Visa, Mastercard y Visa débito.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:21.788084",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "95bcf41d4c5b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Naranja",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA.",
+      "descripcion": "En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:23.952543",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "1407048a4594",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito Visa y Mastercard, y con tarjeta de débito Visa.",
+      "descripcion": "En un pago con tarjetas de crédito Visa y Mastercard, y con tarjeta de débito Visa.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:24.436680",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "b8aa3933570f",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Mercado Pago"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Todos los Jueves de Agosto Comprando en: 20% De descuento 20% de descuento en un pago con Cuenta Digital de Carrefour Banco Descuento aplicado en el acto. Tope de devolución $10.000. NO INCLUYE CARNICERÍA, FRUTAS, VERDURAS, ELECTROS, BAZAR, TEXTIL, OFERTÓN POR BULTO, PACK FAMILIAR NI PRECIO SÚPER",
+      "tope": "$10.000",
+      "dias": [
+        "Martes",
+        "Jueves",
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.268151",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 53.0,
+      "destacada": false
+    },
+    {
+      "id": "94d89e25de0f",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "Comprando todos los Martes de Agosto Comprando en: 20% de descuento 20% de descuento con Tarjeta de Crédito de Carrefour Banco En el acto Sin Tope No incluye carnicerías, huevos de gallina, ni electro Ver legal SUJETO A CONDICIONES DE OTORGAMIENTO YO APROBACIÓN CREDITICIA. 20% DE DESCUENTO EXC",
+      "tope": "$10.000",
+      "dias": [
+        "Domingo",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.660622",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 53.0,
+      "destacada": false
+    },
+    {
+      "id": "d567f7432af7",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cuenta DNI"
+      ],
+      "beneficio": "10%",
+      "descripcion": "10% de descuento 10% de descuento en tu compra con Cuenta DNI. Y si sos jubilado, tenes 5% de descuento adicional MÍNIMO DE COMPRA $15.000. SI SOS JUBILADO TOPE DE $5.000. NO INCLUYE CARNICERÍA, HUEVOS DE GALLINA, ELECTROS, BAZAR, TEXTIL, OFERTÓN BULTO, PACK FAMILIAR NI PRECIO SUPER BAJO TODOS LOS D",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:14.632902",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.5,
+      "destacada": false
+    },
+    {
+      "id": "c63d83fe71b6",
+      "comercio": "Carrefour",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "10%",
+      "descripcion": "Martes a Domingo de Agosto Comprando en: 10% de descuento 10% de descuento con Club LA NACION (Solo Entrega Inmediata) Sin Tope Ver legal DESCUENTO EXCLUSIVO PARA CLIENTES DE CLUB LA NACION. LAS PERSONAS QUE QUIERAN ACCEDER AL BENEFICIO DEBEN ESTAR REGISTRADAS AL PROGRAMA DE CLUB LA NACION AL M",
+      "tope": null,
+      "dias": [
+        "Domingo",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:15.942694",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.5,
+      "destacada": false
+    },
+    {
+      "id": "9d85e796c2ff",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "15%",
+      "descripcion": "15%DTO EXCLUSIVO DIGITAL Auriculares MOTOROLA Xt800 Anc Negro PRECIO CON 15%DTO $63.749,15 Precio Regular: $74.999,00 Precio sin impuestos nacionales: $61.982,64 6 cuotas sin interés de $10.624,86 Ver",
+      "tope": "$6.374.915",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:10.074896",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.5,
+      "destacada": false
+    },
+    {
+      "id": "a4371dbff93c",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "15%",
+      "descripcion": "Todos los Miércoles de Agosto Comprando en: 15% de Ahorro 15% de Ahorro con tarjeta de débito y en un pago con tarjeta de crédito Visa, Mastercard y Amex - Exclusivo para clientes con plan sueldo Tope de devolución (POR MES Y POR CUENTA) $ 10.000 - NO INCLUYE ELECTRODOMESTICOS, ELECTRONICA, TELEFO",
+      "tope": "$10.000",
+      "dias": [
+        "Domingo",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:13.485713",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "600e4440df3c",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "18 cuotas sin interés con tarjetas de crédito Visa.",
+      "descripcion": "18 cuotas sin interés con tarjetas de crédito visa y MasterCard.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:10.621370",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "548ffc2fbf12",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "3-6 cuotas sin interés con tarjetas de crédito visa y MasterCard.",
+      "descripcion": "3-6-9-12-15-18 cuotas sin interés con tarjetas de crédito visa y MasterCard.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:11.287490",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "d7d2971c5a30",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "30%",
+      "descripcion": "L M M J V S D 30% DE DESCUENTO En un pago con tarjetas de crédito Cabal y Débito Cabal Válido únicamente los lunes 0308, 1008, 2408 y 3108. Aplican exclusiones. Tope de Reintegro $15000",
+      "tope": "$150",
+      "dias": [
+        "Lunes"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:21.852713",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "c89809a2fdf0",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Mercado Pago"
+      ],
+      "beneficio": "10%",
+      "descripcion": "Todos los Viernes de Agosto Comprando en: 10% de Ahorro 10% Ahorro en tu compra con Mercado Pago. Sin tope Exclusivo con dinero en cuenta VALIDO EXCLUSIVAMENTE PARA SUCURSALES FISICAS. PROMOCIÓN NO ACUMULABLE CON OTRAS PROMOCIONES YO FOLLETOS VIGENTES. NO INCLUYE CARNICERÍA, HUEVOS DE GALLINA, E",
+      "tope": null,
+      "dias": [
+        "Miércoles",
+        "Viernes"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.865048",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 51.5,
+      "destacada": false
+    },
+    {
+      "id": "697ac5b4905b",
+      "comercio": "Jumbo",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "Hasta 25% en Notebooks, Celulares y más",
+      "tope": "$25",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-08-05T11:11:39.904429",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.5,
+      "destacada": false
+    },
+    {
+      "id": "65ae84f23310",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "25%DTO Salchichas Sin Piel 6 Unidades Vienissima 230g PRECIO CON 25%DTO $2.474,25 Precio Regular: $3.299,00 Precio sin impuestos nacionales: $2.726,45 Precio por 1 Kilo : $14.343,47 Agregar Ver planes",
+      "tope": "$464.925",
+      "dias": [
+        "Viernes"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:07.102602",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "3a7f93e6b79a",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito"
+      ],
+      "beneficio": "18 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 18 CUOTAS SIN INTERÉS 3-6-9-12-18 cuotas sin interés con tarjetas de crédito Cabal. Prod. Seleccionados de Electro. Del 0108 al 31082026 Aplican exclusiones. Ver legales. Digital",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:11.942119",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "3ece88ae09a1",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito"
+      ],
+      "beneficio": "3-6-9-12-18 cuotas sin interés con tarjetas de crédito Cabal.",
+      "descripcion": "3-6-9-12-18 cuotas sin interés con tarjetas de crédito Cabal.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:11.991174",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "da8200a2dc6f",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Débito"
+      ],
+      "beneficio": "En un pago con tarjetas débito Visa.",
+      "descripcion": "En un pago con tarjetas débito Visa.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.458427",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "1fc814c3c60d",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito"
+      ],
+      "beneficio": "12-18 cuotas sin interés con tarjetas de crédito American Express de American express.",
+      "descripcion": "12-18 cuotas sin interés con tarjetas de crédito American Express de American express.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:14.424101",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "c63d83fe71b6",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "10%",
+      "descripcion": "Lunes, Martes, Miércoles de Agosto Comprando en: 10% de descuento 10% de descuento si sos parte de Mi Carrefour y beneficiario de Anses o mayor de 60 años. Tope de devolución: $35.000. No incluye carnicería, huevos de gallina, ni electro Ver legal VÁLIDO DE LUNES A MIÉRCOLES HASTA EL 310826 INC",
+      "tope": "$35.000",
+      "dias": [
+        "Domingo",
+        "Jueves",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Sábado"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.972745",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 49.5,
+      "destacada": false
+    },
+    {
+      "id": "5b35162a7884",
+      "comercio": "Carrefour",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "15%",
+      "descripcion": "Lunes de Agosto Comprando en: 15% de descuento 15% de descuento con Club La Nación Sin Tope No incluye electro ni carnicería. Ver legal PROMOCIÓN VÁLIDA TODOS LOS LUNES HASTA EL 31082026, PRESENTANDO DNI DEL TITULAR DE CLUB LA NACIÓN EN LÍNEA DE CAJAS. VÁLIDO EN TIENDAS HIPERMERCADOS CARREFO",
+      "tope": "$20.000",
+      "dias": [
+        "Domingo",
+        "Jueves",
+        "Lunes",
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:13.359746",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 49.5,
+      "destacada": false
+    },
+    {
+      "id": "879aa6d16e15",
+      "comercio": "Carrefour",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "Crédito",
+        "Cuenta DNI",
+        "Débito",
+        "Mastercard",
+        "Mercado Pago",
+        "Visa"
+      ],
+      "beneficio": "10%",
+      "descripcion": "Todos los Miércoles de Agosto Comprando en: 10% de descuento 10% de descuento en tu compra con Cuenta DNI. Y sos jubilado, tenes 5% de descuento adicional Sin Tope Y si sos jubilado, 5% de descuento con tope de $5.000. PROMOCIÓN NO ACUMULABLE CON OTRAS PROMOCIONES YO FOLLETOS VIGENTES. NO INCL",
+      "tope": "$15.000",
+      "dias": [
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:14.581089",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 49.0,
+      "destacada": false
+    },
+    {
+      "id": "55a41d87aac8",
+      "comercio": "Día",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "Ver por díaVer por banco",
+      "descripcion": "Ver por díaVer por banco Lunes Martes Miércoles Jueves Viernes Sábado Domingo Todos Ver promociones: Todas Tiendas Online (App y Web) ONLINE TIENDAS Ver Legales ONLINE Ver Legales ONLINE TIENDAS Ver L",
+      "tope": null,
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Consultar vigencia",
+      "url": "https://diaonline.supermercadosdia.com.ar/medios-de-pago-y-promociones",
+      "actualizado": "2026-08-05T11:11:53.590295",
+      "fuente": "dia_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "0bc10875329b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Naranja"
+      ],
+      "beneficio": "3 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 3 CUOTAS SIN INTERÉS Con tarjeta Naranja X Aplican exclusiones. Ver legal. Digital",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.140023",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "d241b6d30b50",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Naranja"
+      ],
+      "beneficio": "Con tarjeta Naranja X",
+      "descripcion": "Con tarjeta Naranja X",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:12.219800",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "cb5b5deeec9b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito TCI",
+      "descripcion": "En un pago con tarjetas de crédito TCI",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:26.290692",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "002ffa887b3d",
+      "comercio": "Día",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "5%",
+      "descripcion": "5% Sin tope Pagando con QR TODOS LOS DÍAS",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.969756",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "5b35162a7884",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "15%",
+      "descripcion": "Viernes de Agosto Comprando en: 15% de descuento 15 % de descuento en tu compra con Cuenta Digital de Carrefour Banco Acumulable con todas las promos Sin Tope NO INCLUYE CARNICERÍA, HUEVOS DE GALLINA, ELECTROS, BAZAR, TEXTIL, OFERTÓN POR BULTO, PACK FAMILIAR NI PRECIO SÚPER BAJO TODOS LOS DÍAS.",
+      "tope": "$20.000",
+      "dias": [
+        "Jueves",
+        "Martes",
+        "Miércoles",
+        "Viernes"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.735811",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 45.0,
+      "destacada": false
+    },
+    {
+      "id": "5f3da7eb462d",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "18 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 18 CUOTAS SIN INTERÉS 18 cuotas sin interés con tarjetas de crédito Visa. Prod. Seleccionados Electro, Ferretería, automotor. Del 0108 al 31082026 Aplican exclusiones. Ver legales D",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:10.542671",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 44.5,
+      "destacada": false
+    },
+    {
+      "id": "7106d94b2290",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "0%",
+      "descripcion": "LLEVANDO 4 4X3 Leche Larga Vida Parcialmente Descremada 0% Lactosa Las Tres Niñas 1l PRECIO CON 4X3 $2.104,97 Precio Regular: $2.810,00 Precio sin impuestos nacionales: $2.322,31 Precio por 1 Litro :",
+      "tope": "$210.497",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:06.941395",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 40.5,
+      "destacada": false
+    },
+    {
+      "id": "788fea831ad9",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "1%",
+      "descripcion": "Leche Larga Vida Parcialmente Descremada Liviana 1% La Serenisima 1l $2.809,00 Precio regular: $2.809,00 Precio sin impuestos nacionales: $2.321,49 Precio por 1 Litro: $2.809,00 Agregar Ver planes de",
+      "tope": "$280.900",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-08-05T11:12:08.456138",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 40.5,
+      "destacada": false
+    },
+    {
+      "id": "b0b116632449",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "5%",
+      "descripcion": "5% Tope: $20.000 x cuenta x mes Jubilados L M X J V S D",
+      "tope": "$20.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.967697",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 40.5,
+      "destacada": false
+    },
+    {
+      "id": "a4e3d251a8b6",
+      "comercio": "Jumbo",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "20%",
+      "descripcion": "ElectrodomésticosHasta 20% en Heladeras, Lavarropas, Microondas y másHasta 30% en Pequeños ElectrosHasta 30% en Tv, Soportes y másHasta 25% en Notebooks, Celulares y más",
+      "tope": "$20",
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.jumbo.com.ar/descuentos-del-dia",
+      "actualizado": "2026-08-05T11:11:39.886937",
+      "fuente": "jumbo_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 40.0,
+      "destacada": false
+    },
+    {
+      "id": "473b58f3abe9",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "5%",
+      "descripcion": "Sin Tope Y si sos jubilado, 5% de descuento con tope de $5.000. PROMOCIÓN NO ACUMULABLE CON OTRAS PROMOCIONES YO FOLLETOS VIGENTES. NO INCLUYE CARNICERÍA, HUEVOS DE GALLINA, ELECTROS, BAZAR, TEXTIL, OFERTÓN POR BULTO, PACK FAMILIAR NI PRECIO SÚPER BAJO TODOS LOS DÍAS.",
+      "tope": "$5.000",
+      "dias": [],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:14.805314",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 35.5,
+      "destacada": false
+    },
+    {
+      "id": "cf730d0acfae",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "5%",
+      "descripcion": "5% Tope: $5.000 por semana Pagando con Modo L M X J V S D",
+      "tope": "$5.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-08-05T11:13:25.969265",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 35.5,
+      "destacada": false
+    },
+    {
+      "id": "807b8a179929",
+      "comercio": "Carrefour",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "MODO",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "5%",
+      "descripcion": "Ver legal PROMOCIÓN VÁLIDA EXCLUSIVAMENTE DE LUNES A VIERNES HASTA EL 31082026. BENEFICIO DEL 5% PARA JUBILADOS Y QUIENES COBREN SUS HABERES PREVISIONALES POR BNA. PARA COMPRAS REALIZADAS EN 1 PAGO CON TARJETAS DE CRÉDITO VISA Y MASTERCARD EMITIDAS POR EL BANCO NACIÓN A TRAVÉS DE MODO O BNA. VÁL",
+      "tope": "$500",
+      "dias": [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Viernes"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:14.440633",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 30.0,
+      "destacada": false
+    },
+    {
+      "id": "f9be03e4b662",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Mercado Pago"
+      ],
+      "beneficio": "00%",
+      "descripcion": "Lunes y Miércoles de Agosto Comprando en: 6cuotas sin interés Hasta 6 Cuotas sin interés con Mercado Pago Pagando con cuotas sin tarjeta Ver legal C.F.T. 0,00% BENEFICIO VÁLIDO EXCLUSIVAMENTE EN LA REPÚBLICA ARGENTINA, HASTA EL 31082026. EL BENEFICIO CONSISTE 6 CUOTAS SIN INTERÉS PAGANDO CON LA",
+      "tope": "$6",
+      "dias": [
+        "Domingo",
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Sábado"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:12.383913",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 29.5,
+      "destacada": false
+    },
+    {
+      "id": "807b8a179929",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "MODO",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "5%",
+      "descripcion": "5% de Ahorro 5% de Ahorro, si sos jubilado o pensionado, en el acto con tarjetas de crédito visa y mastercard y tarjetas de débito mastercard. Exclusivo pagando con Modo. Acumulable con promociones vigentes. Tope semanal:$5000. No incluye electrodomésticos, electrónica, telefonía celular carnicería",
+      "tope": "$500",
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver condiciones",
+      "url": "https://www.carrefour.com.ar/descuentos-bancarios",
+      "actualizado": "2026-08-05T11:11:14.494038",
+      "fuente": "carrefour_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 27.0,
+      "destacada": false
+    }
+  ]
+}
