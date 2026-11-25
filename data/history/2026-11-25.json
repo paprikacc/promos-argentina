@@ -1,0 +1,1289 @@
+{
+  "fecha": "2026-11-25T18:57:52.171639",
+  "total": 59,
+  "promociones": [
+    {
+      "id": "d7c3259dd7ed",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "75%",
+      "descripcion": "Bancos: Todos Comercios: Todos Solo con promos Solo hoy ZOOM 75%",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324395",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 88.0,
+      "destacada": true
+    },
+    {
+      "id": "d7d2971c5a30",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "30%",
+      "descripcion": "L M M J V S D 30% DE DESCUENTO En un pago con tarjetas de crédito Cabal y Débito Cabal Sin tope de reintegro. Aplican exclusiones. Ver legal Online",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:08.052536",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 80.0,
+      "destacada": true
+    },
+    {
+      "id": "43db405e9ae3",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "30%",
+      "descripcion": "30% Sin tope Pagando con Modo L M X J V S D",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324597",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 76.0,
+      "destacada": true
+    },
+    {
+      "id": "326896733cb1",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "35%",
+      "descripcion": "35% Sin tope Pagando con Modo L M X J V S D",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324612",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 76.0,
+      "destacada": true
+    },
+    {
+      "id": "b628965e7c04",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Naranja",
+        "Visa"
+      ],
+      "beneficio": "30%",
+      "descripcion": "L M M J V S D 30% DE DESCUENTO En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA. Tope de reintegro $12.000 por semana para clientes adheridos a Plan Épico de Naran",
+      "tope": "$20.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.286121",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 75.5,
+      "destacada": true
+    },
+    {
+      "id": "6a1f59028d5b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "35%",
+      "descripcion": "L M M J V S D 35% DE DESCUENTO En un pago con tarjetas crédito y débito Visa Cartera general con tope de reintegro $ 15.000 por transacción, para Segmento Unico tope de reintegro $ 25.000 po",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:08.154636",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 72.5,
+      "destacada": true
+    },
+    {
+      "id": "cfb7b83a9b61",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "Leche Larga Vida Parcialmente Descremada COTO 1l 30%Dto $1.699,07 1 UNI Precio por 1 Litro: $2.499,00 Precio regular: $2.499,00 Agregar",
+      "tope": "$169.907",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:55:58.698191",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "6dcd2e92260f",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "40%",
+      "descripcion": "Pochoclera TOP HOUSE Bjxb001 1200 W 40%Dto $20.994,62 Precio regular: $35.999,00 1 cuotas sin interes de $20.994,62 Ver producto",
+      "tope": "$2.099.462",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:55:59.215074",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "64838e4f4507",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "Ventilador De Mesa MONDIAL 12 Plastico Vsp-30-b 60 W Exclusivo Digital 35%Dto $44.988,36 Precio regular: $69.999,00 6 cuotas sin interes de $7.498,06 Ver producto",
+      "tope": "$4.498.836",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:55:59.581964",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "2a7684209ba0",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "4 CARREFOUR 30% Tope: $20.000  x cuenta x mes Cartera Singular L M X J V S D",
+      "tope": "$20.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324148",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "ca8efdc12ddd",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "35%",
+      "descripcion": "32 BANCOS  19 COMERCIOS  318 PROMOCIONES  35% DTO MÁXIMO  22% DTO PROMEDIO  $24.349 TOPE PROM. MENSUAL  7 CUOTAS PROMEDIO",
+      "tope": "$24.349",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324285",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "21c86652eba7",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "30%",
+      "descripcion": "30% Tope: $12.000 por semana Plan Épico L M X J V S D",
+      "tope": "$12.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324483",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "08667e38115a",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Débito"
+      ],
+      "beneficio": "30%",
+      "descripcion": "30% Tope: $15.000 x cuenta x mes Débito L M X J V S D",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.327236",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.5,
+      "destacada": false
+    },
+    {
+      "id": "1d0d686b429f",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "L M M J V S D 20% DE DESCUENTO En un pago con tarjetas de crédito TCI Sin tope de reintegro. Aplican exclusiones. Ver legal. Online",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:07.702654",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "e0bfdd1717ff",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa"
+      ],
+      "beneficio": "25%",
+      "descripcion": "L M M J V S D 25% DE DESCUENTO En un pago con Tarjetas prepagas Visa de PERSONAL PAY Sin tope de reintegro. Aplican exclusiones. Ver legal. Online",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:07.802289",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "569405248466",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "22%",
+      "descripcion": "22% DTO PROMEDIO",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324363",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "24f1ed0aa998",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "25%",
+      "descripcion": "25% Sin tope Pagando con Modo L M X J V S D",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324431",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "8585007f9588",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "25% Sin tope Pagando con QR L M X J V S D",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324503",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 68.0,
+      "destacada": false
+    },
+    {
+      "id": "b5ff9464412d",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Naranja",
+        "Visa"
+      ],
+      "beneficio": "20%",
+      "descripcion": "L M M J V S D 20% DE DESCUENTO En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA. Tope de reintegro: $3.000 por semana para clientes adheridos a planes de suscripci",
+      "tope": "$25.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.371011",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    },
+    {
+      "id": "8c3e133611e0",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "25%",
+      "descripcion": "L M M J V S D 25% DE DESCUENTO En un pago con tarjetas de crédito Visa, Mastercard y Cabal Tope de reintegro $30.000. En compras en un pago. Aplica en los productos sin oferta, aplican exclu",
+      "tope": "$30.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:06.704474",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    },
+    {
+      "id": "87478bb19b58",
+      "comercio": "Makro",
+      "banco": "Banco Galicia",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "American Express",
+        "Cabal",
+        "Naranja",
+        "MODO",
+        "Mercado Pago",
+        "Cuenta DNI",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "20%",
+      "descripcion": "BANCARIAS Descubrí las mejores promociones bancarias día a día. Encontrá las ofertas que necesitas para ahorrar al máximo. TodasLunesMartesMiércolesJuevesViernesSábadoDomingo Jueves 20% por usuario",
+      "tope": "$20.000",
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Consultar condiciones",
+      "url": "https://makro.com.ar/beneficios-bancarios/",
+      "actualizado": "2026-11-25T18:56:15.774766",
+      "fuente": "makro_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 67.5,
+      "destacada": false
+    },
+    {
+      "id": "3d92f0f2462d",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Naranja",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "25%",
+      "descripcion": "L M M J V S D 25% DE DESCUENTO En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA. Tope de reintegro $ 9.500 por semana para clientes adheridos a Plan Turbo de Naran",
+      "tope": "$9.500",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:08.318900",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 62.5,
+      "destacada": false
+    },
+    {
+      "id": "5ebd99123af5",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "20%",
+      "descripcion": "2 ARCOIRIS 20% Tope: $100.000  x cuenta x mes Solo Plan Black",
+      "tope": "$100.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324052",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "ead098574dc6",
+      "comercio": "Día",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "20%",
+      "descripcion": "3 DIARCO 20% Tope: $20.000  por semana Pagando con Modo L M X J V S D",
+      "tope": "$20.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324107",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "469eb3874836",
+      "comercio": "Carrefour",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "5 CARREFOUR 25% Tope: $20.000  x cuenta x mes Cuenta Sueldo y Plus L M X J V S D",
+      "tope": "$20.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324189",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "c2f5501e5242",
+      "comercio": "Día",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "20%",
+      "descripcion": "20% Tope: $100.000 x cuenta x mes Solo Plan Black  TODOS LOS DÍAS",
+      "tope": "$100.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324785",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "eb83455e1f99",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "MODO"
+      ],
+      "beneficio": "20%",
+      "descripcion": "20% Tope: $10.000 por semana Pagando con Modo L M X J V S D",
+      "tope": "$10.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.325515",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.5,
+      "destacada": false
+    },
+    {
+      "id": "9a8ade71b5e5",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "10%",
+      "descripcion": "10% Sin tope L M X J V S D",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324822",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 60.0,
+      "destacada": false
+    },
+    {
+      "id": "5e1132b5836c",
+      "comercio": "Coto",
+      "banco": "Banco Macro",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "3-6-9-12 cuotas sin interés con tarjetas de crédito Visa, Mastercard y American express del Banco Ma",
+      "descripcion": "3-6-9-12 cuotas sin interés con tarjetas de crédito Visa, Mastercard y American express del Banco Macro.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.904678",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "4bd7ef0107ba",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito",
+        "Débito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito Visa y Mastercard.",
+      "descripcion": "SGTO IDENTITÉ En un pago con tarjetas de crédito Visa y Mastercard.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.335590",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "a948932b505b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "PLAN SUELDO En un pago con tarjetas de crédito Visa, Mastercard y Visa débito.",
+      "descripcion": "PLAN SUELDO En un pago con tarjetas de crédito Visa, Mastercard y Visa débito.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:06.584787",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "65e265283b12",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Mastercard",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito Visa y Mastercard, y con tarjetas de débito Visa.",
+      "descripcion": "En un pago con tarjetas de crédito Visa y Mastercard, y con tarjetas de débito Visa.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:08.015124",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "95bcf41d4c5b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Naranja",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA.",
+      "descripcion": "En un pago con tarjeta de crédito Naranja X o tarjeta Débito Naranja X VISA.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:08.287062",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 55.0,
+      "destacada": false
+    },
+    {
+      "id": "04761ed911af",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "15%",
+      "descripcion": "15% Sin tope Min. de compra $15.000 L M X J V S D",
+      "tope": "$15.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.324764",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.5,
+      "destacada": false
+    },
+    {
+      "id": "e69d0e80e633",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "15-18-20 cuotas sin interés con tarjetas de crédito Visa y Mastercard.",
+      "descripcion": "SGTO UNICO 3-6-9-12 cuotas sin interés con tarjetas de crédito Visa y Mastercard",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.516946",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "c13ec2e85469",
+      "comercio": "Coto",
+      "banco": "Banco Galicia",
+      "metodo_pago": [
+        "Visa",
+        "American Express",
+        "Crédito"
+      ],
+      "beneficio": "3-6-9-12 cuotas sin interés con tarjetas de crédito Visa y American Express del Banco Galicia.",
+      "descripcion": "3-6-9-12 cuotas sin interés con tarjetas de crédito Visa y American Express del Banco Galicia.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.817669",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "52fe11d88eb8",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjetas crédito y débito Visa",
+      "descripcion": "En un pago con tarjetas crédito y débito Visa",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.420058",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "f994c2729b88",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Débito",
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito Cabal y Débito Cabal",
+      "descripcion": "En un pago con tarjetas de crédito Cabal y Débito Cabal",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:08.115766",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 52.0,
+      "destacada": false
+    },
+    {
+      "id": "2c51c6ed851b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "20%",
+      "descripcion": "L M M J V S D 20% DE DESCUENTO En un pago si sos miembro de nuestra Comunidad. Con todos los medios de pago Siendo miembro de Comunidad Coto - Aplican exclusiones. Ver legales - Sin límite de reinte",
+      "tope": "$1.199.920",
+      "dias": [
+        "Martes",
+        "Miércoles"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:55:56.781936",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "65ae84f23310",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "25%",
+      "descripcion": "Agua Sin Gas Mineral Villavicencio 2000c 25%Dto $2.400,00 1 UNI Precio por 1 Litro: $1.600,00 Precio regular: $3.200,00 Agregar",
+      "tope": "$240.000",
+      "dias": [
+        "Jueves"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:55:58.088167",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "3a013bcc7335",
+      "comercio": "Coto",
+      "banco": "Banco Galicia",
+      "metodo_pago": [
+        "Mastercard",
+        "Crédito"
+      ],
+      "beneficio": "3-6-9-12-18 cuotas sin interés con tarjetas de crédito Mastercard del Banco Galicia.",
+      "descripcion": "3-6-9-12-18 cuotas sin interés con tarjetas de crédito Mastercard del Banco Galicia.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.731378",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "3ece88ae09a1",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito"
+      ],
+      "beneficio": "3-6-9-12-18 cuotas sin interés con tarjetas de crédito Cabal.",
+      "descripcion": "3-6-9-12-18 cuotas sin interés con tarjetas de crédito Cabal.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.084143",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "1fc814c3c60d",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito"
+      ],
+      "beneficio": "12-18 cuotas sin interés con tarjetas de crédito American Express de American express.",
+      "descripcion": "12-18 cuotas sin interés con tarjetas de crédito American Express de American express.",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:03.916451",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 50.0,
+      "destacada": false
+    },
+    {
+      "id": "55a41d87aac8",
+      "comercio": "Día",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "Ver por díaVer por banco",
+      "descripcion": "Ver por díaVer por banco Lunes Martes Miércoles Jueves Viernes Sábado Domingo Todos Ver promociones: Todas Tiendas Online (App y Web) ONLINE TIENDAS Ver Legales ONLINE TIENDAS Ver Legales ONLINE TIEND",
+      "tope": null,
+      "dias": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ],
+      "vigencia": "Consultar vigencia",
+      "url": "https://diaonline.supermercadosdia.com.ar/medios-de-pago-y-promociones",
+      "actualizado": "2026-11-25T18:55:44.065518",
+      "fuente": "dia_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "e9be82cdd258",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Naranja"
+      ],
+      "beneficio": "3 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 3 CUOTAS SIN INTERÉS 3 cuotas sin interés con tarjetas Naranja X Aplican exclusiones. Ver legal. Online",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.215267",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "4923b44975a8",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Naranja"
+      ],
+      "beneficio": "3 cuotas sin interés con tarjetas Naranja X",
+      "descripcion": "3 cuotas sin interés con tarjetas Naranja X",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.254673",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "cb5b5deeec9b",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito"
+      ],
+      "beneficio": "En un pago con tarjetas de crédito TCI",
+      "descripcion": "En un pago con tarjetas de crédito TCI",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:07.766485",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "ad5dc469f18e",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Visa"
+      ],
+      "beneficio": "En un pago con Tarjetas prepagas Visa de PERSONAL PAY",
+      "descripcion": "En un pago con Tarjetas prepagas Visa de PERSONAL PAY",
+      "tope": null,
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:07.851506",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 48.0,
+      "destacada": false
+    },
+    {
+      "id": "fa58bf69d0cb",
+      "comercio": "Coto",
+      "banco": "Banco Macro",
+      "metodo_pago": [
+        "American Express",
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "12 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 12 CUOTAS SIN INTERÉS 3-6-9-12 cuotas sin interés con tarjetas de crédito Visa, Mastercard y American express del Banco Macro. Productos seleccionados de ferretería, automotor, juguete",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.852321",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 44.5,
+      "destacada": false
+    },
+    {
+      "id": "9d85e796c2ff",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "15%",
+      "descripcion": "Smart Tv Led SAMSUNG 50 4K Un50u8000fgczb Tizen 1 Pago 15% $709.873,86 CON COMUNIDAD PAGAS $709.873,86 Precio regular: $839.988,00 12 cuotas sin interes de $69.999,00 Ver producto",
+      "tope": "$70.987.386",
+      "dias": [
+        "Martes"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:00.098158",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 42.0,
+      "destacada": false
+    },
+    {
+      "id": "9ecd27d409a4",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "20 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 20 CUOTAS SIN INTERÉS 15-18-20 cuotas sin interés con tarjetas de crédito Visa y Mastercard. Productos seleccionados de Electrodomésticos, Automotor, Ferretería, Deportes, Muebles, Jar",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.453072",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 41.5,
+      "destacada": false
+    },
+    {
+      "id": "6d3c3fa67c84",
+      "comercio": "Coto",
+      "banco": "Banco Galicia",
+      "metodo_pago": [
+        "Visa",
+        "American Express",
+        "Crédito"
+      ],
+      "beneficio": "12 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 12 CUOTAS SIN INTERÉS 3-6-9-12 cuotas sin interés con tarjetas de crédito Visa y American Express del Banco Galicia. Productos seleccionados Eletrodomésticos, Ferretería, Automotor, De",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.766518",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 41.5,
+      "destacada": false
+    },
+    {
+      "id": "f8237dda74d4",
+      "comercio": "Coto",
+      "banco": "Banco Nación",
+      "metodo_pago": [
+        "Crédito",
+        "Mastercard",
+        "Visa"
+      ],
+      "beneficio": "12 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 12 CUOTAS SIN INTERÉS SGTO UNICO 3-6-9-12 cuotas sin interés con tarjetas de crédito Visa y Mastercard Productos seleccionados Electrodomésticos, Ferretería, Automotor, Juguete",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:05.071103",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 41.5,
+      "destacada": false
+    },
+    {
+      "id": "788fea831ad9",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "1%",
+      "descripcion": "Leche Larga Vida Parcialmente Descremada Liviana 1% La Serenisima 1l No acumulable con otras promos Oferta $1.970,00 1 UNI Precio por 1 Litro: $1.970,00 Agregar",
+      "tope": "$197.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:55:57.952127",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 40.5,
+      "destacada": false
+    },
+    {
+      "id": "7c34bffb799f",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "3%",
+      "descripcion": "Leche Larga Vida Entera Ua Clasica 3% LA SERENISIMA 1l No acumulable con otras promos Oferta $1.970,00 1 UNI Precio por 1 Litro: $1.970,00 Agregar",
+      "tope": "$197.000",
+      "dias": [],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:55:58.385663",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 40.5,
+      "destacada": false
+    },
+    {
+      "id": "a75628946e79",
+      "comercio": "Coto",
+      "banco": "Banco Galicia",
+      "metodo_pago": [
+        "Mastercard",
+        "Crédito"
+      ],
+      "beneficio": "18 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 18 CUOTAS SIN INTERÉS 3-6-9-12-18 cuotas sin interés con tarjetas de crédito Mastercard del Banco Galicia. Productos seleccionados Eletrodomésticos, Ferretería, Automotor, Decoración,",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:01.666248",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 39.5,
+      "destacada": false
+    },
+    {
+      "id": "3a7f93e6b79a",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "Cabal",
+        "Crédito"
+      ],
+      "beneficio": "18 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 18 CUOTAS SIN INTERÉS 3-6-9-12-18 cuotas sin interés con tarjetas de crédito Cabal. Productos seleccionados de Electrodomésticos. Vigencia del 0111 al 30112026. Aplican exclusiones.",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:02.035414",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 39.5,
+      "destacada": false
+    },
+    {
+      "id": "9f83018e165f",
+      "comercio": "Coto",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "American Express",
+        "Crédito"
+      ],
+      "beneficio": "18 CUOTAS SIN INTERÉS",
+      "descripcion": "L M M J V S D 18 CUOTAS SIN INTERÉS 12-18 cuotas sin interés con tarjetas de crédito American Express de American express. Productos seleccionados de Electrodomésticos, Ferreteria, Automotor",
+      "tope": null,
+      "dias": [
+        "Domingo"
+      ],
+      "vigencia": "Ver detalles",
+      "url": "https://www.cotodigital.com.ar/promociones",
+      "actualizado": "2026-11-25T18:56:03.852940",
+      "fuente": "coto_oficial",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 39.5,
+      "destacada": false
+    },
+    {
+      "id": "b0b116632449",
+      "comercio": "Supermercados",
+      "banco": "Todos Los Bancos",
+      "metodo_pago": [
+        "No Especificado"
+      ],
+      "beneficio": "5%",
+      "descripcion": "5% Tope: $5.000 por semana Solo Bs. As. L M X J V S D",
+      "tope": "$5.000",
+      "dias": [],
+      "vigencia": "Consultar vigencia",
+      "url": "https://promos.clash.com.ar/supermercados/",
+      "actualizado": "2026-11-25T18:57:25.328962",
+      "fuente": "clash",
+      "confianza": 100,
+      "flags_fraude": [],
+      "score": 35.5,
+      "destacada": false
+    }
+  ]
+}
